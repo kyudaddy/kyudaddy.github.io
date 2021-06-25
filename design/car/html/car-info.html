@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="#" class="icon close-btn">닫기</a>
+    <a href="#" class="tel-btn blinking">컨시어지 서비스</a>
+  </header>
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="title-wrap">
+        <h3>자동차 정보를 <br>직접 선택해 주세요.</h3>
+        <ul>
+          <li>입력하신 번호로 자동차 정보를 가져오지 못했습니다.</li>
+          <li>자동차 정보를 잘 모를 땐 우측 상단 컨시어지 서비스를 이용해보세요.</li>
+        </ul>
+      </div>
+      <form action="">
+        <ul>
+          <li>
+            <span class="input-tit">제조사</span>
+            <div class="select-wrap">
+              <a href="javascript:void(0);" class="select">선택해 주세요</a>
+<!--              <div class="helper-txt">7자 또는 8자로 입력해 주세요.</div>-->
+             </div>
+          </li>
+          <li>
+            <span class="input-tit">자동차명</span>
+            <div class="select-wrap">
+               <a href="javascript:void(0);" class="select">i30</a>
+<!--              <div class="helper-txt">7자 또는 8자로 입력해 주세요.</div>-->
+             </div>
+          </li>
+          <li>
+            <span class="input-tit">자동차 등록 연도</span>
+            <div class="select-wrap">
+               <a href="javascript:void(0);" class="select">2020년 05월 05일 이전 등록</a>
+<!--              <div class="helper-txt">7자 또는 8자로 입력해 주세요.</div>-->
+             </div>
+          </li>
+          <li>
+            <span class="input-tit">세부 모델</span>
+            <div class="select-wrap">
+               <a href="javascript:void(0);" class="select">i30 디스커버리즈 1.4 터보</a>
+<!--              <div class="helper-txt">7자 또는 8자로 입력해 주세요.</div>-->
+             </div>
+          </li>
+          <li>
+            <span class="input-tit">세부 옵션</span>
+            <div class="select-wrap">
+               <a href="javascript:void(0);" class="select">5인승 스타일, 오토, 에어컨, P...</a>
+<!--              <div class="helper-txt">7자 또는 8자로 입력해 주세요.</div>-->
+             </div>
+          </li>
+        </ul>
+        <div class="bottom-fixed-wrap">
+          <a href="car-driver.html" class="submit-btn on">계속하기</a>
+        </div>
+      </form>
+    </div>
+  </div>
+        
+  <div class="layer-wrap off">
+    <div class="backdrop-box">
+      <div class="top">
+        <h3>제조사</h3>
+        <a href="javascript:void(0);" class="icon close-btn">닫기</a>
+      </div>
+      <ul>
+        <li><a href="#">현대</a></li>
+        <li><a href="#">기아</a></li>
+        <li><a href="#">쌍용</a></li>
+        <li><a href="#">르노삼성</a></li>
+        <li><a href="#">한국GM</a></li>
+        <li><a href="#">수입차</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //셀렉트 버튼 클릭시
+    $(".select").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

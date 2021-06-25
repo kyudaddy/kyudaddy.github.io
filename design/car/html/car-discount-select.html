@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="#" class="icon close-btn">닫기</a>
+    <a href="#" class="tel-btn">컨시어지 서비스</a>
+  </header>
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="title-wrap">
+        <div class="progress-bar">
+          <div class="bar" style="width: 100%"></div>
+        </div>
+        <h3>할인 특약을 선택해 주세요</h3>
+        <p>할인 특약은 여러 개를 선택할 수 있어요.</p>
+      </div>
+      <form action="">
+        <ul class="check-list">
+          <li>
+            <label for="discount1"><input type="checkbox" id="discount1" checked><span class="check"></span><span class="text">자녀 할인</span>
+            <p><strong>자녀이름 / 2018년 12월 24일</strong></p></label>
+          </li>
+          <li>
+            <label for="discount2"><input type="checkbox" id="discount2"><span class="check"></span><span class="text">마일리지 할인</span>
+            <p>자동차 이동거리에 따라 <strong>최대 40% 할인</strong></p></label>
+          </li>
+          <li>
+            <label for="discount3"><input type="checkbox" id="discount3"><span class="check"></span><span class="text">대중교통 할인</span>
+            <p>자동차가 있어도 대중교통을 자주 이용한다면<br>이용률에 따라 <strong>최대 8% 할인</strong></p></label>
+          </li>
+        </ul>
+        <div class="box-wrap point">
+          <h4>자동 적용되는 할인 특약 안내</h4>
+          <ul class="blit">
+            <li>블랙박스 설치 할인</li>
+            <li>E-mail 전자문서 수령 할인</li>
+            <li>현대 안전운전습관</li>
+            <li>차선이탈경고장치(기본 장착 차량)</li>
+            <li>전방충돌방지장치(기본 장착 차량)</li>
+          </ul>
+        </div>
+        <ul class="caution-txt">
+          <li>자동 적용되는 할인 특약은 보험사 별 추가 서류가 발생할 수 있으며, 보험사 홈페이지에서 위 내역 외 추가 선택 또는 입력이 필요한 경우가 있습니다.</li>
+          <li>보험사 별 특약 추가 선택에 따라 보험료가 변동될 수 있습니다.</li>
+        </ul>
+        <div class="bottom-fixed-wrap">
+          <a href="car-discount-dropdown.html" class="submit-btn on">계속하기</a>
+        </div>
+      </form>
+    </div>
+  </div>
+      
+  
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //셀렉트 버튼 클릭시
+    $(".select").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

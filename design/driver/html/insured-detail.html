@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>운전자보험 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="insured-list.html" class="icon back-btn">뒤로</a>
+    <h1 class="tit">가입한 보험</h1>
+  </header>
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="insurance-tit">
+        <h3>삼성화재 플랫폼회원상해보험<br>(시그널플래너 운전자 플랜)</h3>
+        <p>주문번호 : 01010100101000</p>
+      </div>
+      <div class="info-list">
+        <h4>보험 계약 정보</h4>
+        <dl>
+          <dt>계약자</dt>
+          <dd>이종욱</dd>
+        </dl>
+        <dl>
+          <dt>피보험자</dt>
+          <dd>이종욱</dd>
+        </dl>
+        <dl>
+          <dt>보험</dt>
+          <dd>0000.00.00</dd>
+        </dl>
+        <dl>
+          <dt>만기일</dt>
+          <dd>0000.00.00</dd>
+        </dl>
+        <dl>
+          <dt>보험료</dt>
+          <dd>29,720원 <span class="state">납입 완료</span></dd>
+        </dl>
+        <a href="#" class="block-bar link">
+          <span class="tit">보험 약관 확인</span>
+        </a>
+      </div>
+      <div class="info-list">
+        <p class="tip">만기 등 기타 문의사항은 앱 1:1문의를 이용해주세요.</p>
+        <a href="#" class="block-bar link">
+          <span class="tit">1:1 문의</span>
+        </a>
+      </div>
+      
+      <div class="bottom-fixed-wrap">
+<!--        <a href="#" class="submit-btn on">내 보험 점검 받기</a>-->
+      </div>
+    </div>
+  </div>
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

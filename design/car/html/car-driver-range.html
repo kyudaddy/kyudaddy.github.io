@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="#" class="icon close-btn">닫기</a>
+    <a href="#" class="tel-btn">컨시어지 서비스</a>
+  </header>
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="title-wrap">
+        <div class="progress-bar">
+          <div class="bar" style="width: 50%"></div>
+        </div>
+        <h3>운전할 사람을 선택해 주세요</h3>
+      </div>
+      <form action="">
+        <ul class="radio-list">
+          <li>
+            <label for="driver1"><input type="radio" name="driver" id="driver1"><span class="check"></span><span class="text">본인만 운전</span></label>
+          </li>
+          <li>
+            <label for="driver2"><input type="radio" name="driver" id="driver2"><span class="check"></span><span class="text">본인 + 배우자</span></label>
+          </li>
+          <li>
+            <label for="driver3"><input type="radio" name="driver" id="driver3"><span class="check"></span><span class="text">본인 + 지정 1인</span></label>
+          </li>
+          <li>
+            <label for="driver4"><input type="radio" name="driver" id="driver4"><span class="check"></span><span class="text">가족 + 형제 자매</span></label>
+          </li>
+          <li>
+            <label for="driver5"><input type="radio" name="driver" id="driver5"><span class="check"></span><span class="text">가족(형제 자매 제외)</span></label>
+          </li>
+          <li>
+            <label for="driver6"><input type="radio" name="driver" id="driver6"><span class="check"></span><span class="text">누구나</span></label>
+          </li>
+        </ul>
+        <div class="bottom-fixed-wrap">
+          <a href="car-assurance.html" class="submit-btn on">계속하기</a>
+        </div>
+      </form>
+    </div>
+  </div>
+        
+  <div class="layer-wrap">
+    <div class="backdrop-box">
+      <div class="top">
+        <h3>본인 + 배우자</h3>
+        <a href="javascript:void(0);" class="icon close-btn">닫기</a>
+      </div>
+      
+      <form action="">
+        <ul>
+          <li>
+            <span class="input-tit">배우자의 생년월일을 입력해 주세요.</span>
+            <div class="input-wrap">
+              <input type="text" placeholder="YYYYMMDD">
+              <span class="inputclear icon">삭제</span>
+            </div>
+            <div class="helper-txt">만 20세 이상만 입력해 주세요</div>
+          </li>
+        </ul>
+        <a href="car-assurance.html" class="submit-btn on">완료</a>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //셀렉트 버튼 클릭시
+    $(".select").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

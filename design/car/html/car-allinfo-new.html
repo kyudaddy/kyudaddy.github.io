@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+<!--
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="car-result.html" class="icon close-btn">닫기</a>
+    <a href="#" class="tel-btn">컨시어지 서비스</a>
+  </header>
+-->
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="title-wrap">
+        <h3>입력 정보를 확인해 주세요</h3>
+        <p>본인인증하면 자동차 보험료를 비교할 수 있어요.</p>
+      </div>
+      <div class="info-list">
+        <h4>자동차 정보</h4>
+        <dl>
+          <dt>제조사</dt>
+          <dd>$제조사$</dd>
+        </dl>
+        <dl>
+          <dt>자동차명</dt>
+          <dd>$자동차명$</dd>
+        </dl>
+        <dl>
+          <dt>자동차 등록 연도</dt>
+          <dd>$자동차 등록 연도$</dd>
+        </dl>
+        <dl>
+          <dt>세부모델</dt>
+          <dd>$세부모델$</dd>
+        </dl>
+        <dl>
+          <dt>세부옵션</dt>
+          <dd>$세부옵션$</dd>
+        </dl>
+      </div>
+      <div class="info-list">
+        <h4>운전자 보장 범위</h4>
+<!--        <a href="#" class="link-btn">입력정보 변경</a>-->
+        <dl>
+          <dt>보장범위</dt>
+          <dd>$보장범위$</dd>
+        </dl>
+        <dl>
+          <dt>최연소 운전자</dt>
+          <dd>$최연소 운전자$</dd>
+        </dl>
+      </div>
+      <div class="info-list">
+        <h4>가입담보 및 보장금액</h4>
+<!--        <a href="#" class="link-btn">입력정보 변경</a>-->
+        <p class="tip"><strong>잠깐!</strong>혹시 모르는 사고를 위해 담보는 최대(고급)로 추천드려요.</p>
+        <dl>
+          <dt>대인배상1</dt>
+          <dd>가입(의무가입)</dd>
+        </dl>
+        <dl>
+          <dt>대인배상2</dt>
+          <dd>$대인배상2$</dd>
+        </dl>
+        <dl>
+          <dt>대물배상</dt>
+          <dd>$대물배상$</dd>
+        </dl>
+        <dl>
+          <dt>자기신체사고</dt>
+          <dd>$자기신체사고$</dd>
+        </dl>
+        <dl>
+          <dt>물적사고할증기준</dt>
+          <dd>$물적사고할증기준$</dd>
+        </dl>
+        <dl>
+          <dt>무보험차상해</dt>
+          <dd>$무보험차상해$</dd>
+        </dl>
+        <dl>
+          <dt>자기차량손해</dt>
+          <dd>$자기차량손해$</dd>
+        </dl>
+        <dl>
+          <dt>긴급출동서비스</dt>
+          <dd>$긴급출동서비스$</dd>
+        </dl>
+      </div>
+      <div class="info-list">
+        <h4>특약 할인</h4>
+<!--        <a href="#" class="link-btn">입력정보 변경</a>-->
+        <p class="tip"><strong>잠깐!</strong>기본적인 할인특약은 저희가 미리 포함해뒀어요.</p>
+        <dl>
+          <dt>자녀할인</dt>
+          <dd>자녀 만 9세 이하</dd>
+        </dl>
+        <dl>
+          <dt>마일리지할인</dt>
+          <dd>연간 14,000km 이하</dd>
+        </dl>
+        <dl>
+          <dt>안전운전습관할인</dt>
+          <dd>최소 71점 이상</dd>
+        </dl>
+        <dl>
+          <dt>블랙박스*</dt>
+          <dd>설치</dd>
+        </dl>
+        <dl>
+          <dt>E-mail 전자문서*</dt>
+          <dd>수령</dd>
+        </dl>
+        <dl>
+          <dt>현대안전운전습관*</dt>
+          <dd>최소 71점 이상</dd>
+        </dl>
+        <dl>
+          <dt>차선이탈경고장치*</dt>
+          <dd>기본 장착 차량</dd>
+        </dl>
+        <dl>
+          <dt>전방충돌방지장치*</dt>
+          <dd>기본 장착 차량</dd>
+        </dl>
+        <div class="noti"><strong>*</strong> 자동적용 특약</div>
+      </div>
+      <div class="bottom-fixed-wrap">
+        <span class="bubble">💡 가입이 복잡하고 어렵다면?</span>
+        <a href="car-prove.html" class="submit-btn on"><span class="icon tel"></span>컨시어지 서비스</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //셀렉트 버튼 클릭시
+    $(".select").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

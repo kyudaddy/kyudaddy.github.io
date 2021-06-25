@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <div class="full-layer-wrap">
+    <div class="container">
+      <div class="top">
+        <a href="#" class="icon close-btn">닫기</a>
+        <h2 class="tit">본인 + 배우자</h2>
+      </div>
+      <div class="body">
+        <div class="title-wrap">
+          <h3>배우자 정보를 입력해 주세요</h3>
+        </div>
+        <form action="">
+          <ul>
+            <li>
+              <span class="input-tit">이름</span>
+              <div class="input-wrap">
+                <input type="text" placeholder="이름을 입력해주세요.">
+                <span class="inputclear icon">삭제</span>
+              </div>
+              <div class="helper-txt">반드시 실명을 입력해 주세요.</div>
+            </li>
+            <li>
+              <span class="input-tit">생년월일 및 성별</span>
+              <div class="input-wrap social-number error clearfx">
+                <input type="tel" placeholder="생년월일 8자리 (YYYYMMDD)">
+                <div class="sex-wrap clearfx">
+                  <label for="male"><input type="radio" name="sex" id="male"><span class="text">남성</span></label>
+                  <label for="female"><input type="radio" name="sex" id="female"><span class="text">여성</span></label>
+                </div>
+<!--
+                <input type="tel" size="1">
+                <span class="else-number">******</span>
+-->
+              </div>
+              <div class="helper-txt">만 20세 이상만 입력해 주세요.</div>
+            </li>
+          </ul>
+          <div class="bottom-fixed-wrap">
+            <a href="#" class="submit-btn">완료</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

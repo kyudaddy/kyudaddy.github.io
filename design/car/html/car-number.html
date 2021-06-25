@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="#" class="icon close-btn">닫기</a>
+    <a href="#" class="tel-btn">컨시어지 서비스</a>
+  </header>
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="title-wrap">
+        <h3>자동차 번호를 입력해 주세요</h3>
+      </div>
+      <form action="">
+        <ul>
+          <li>
+            <span class="input-tit">자동차 번호 or 차대 번호</span>
+            <div class="input-wrap">
+              <input type="text" placeholder="OO가OOOO">
+<!--              <span class="inputclear icon">삭제</span>-->
+            </div>
+            <div class="helper-txt">7자 또는 8자로 입력해 주세요.</div>
+          </li>
+        </ul>
+        <div class="bottom-fixed-wrap">
+          <div class="term-wrap">
+            <ul>
+              <li>
+                <label for="check-1"><input type="checkbox" id="check-1"><span class="check"></span><span class="text">약관 전체 동의</span></label>
+              </li>
+              <li>
+               <a href="#" class="term-link">개인정보 수집 및 이용</a>
+              </li>
+              <li>
+                <a href="#" class="term-link">개인정보의 제3자 정보 제공 동의 및 처리위탁</a>
+              </li>
+            </ul>
+          </div>
+          <a href="car-number-confirm.html" class="submit-btn on">계속하기</a>
+        </div>
+      </form>
+      
+      <a href="car-number-pre.html" class="link-btn">자동차 구입 예정이세요?<br>그럼 여기서 예상 보험료를 확인해보세요.</a>
+    </div>
+  </div>
+  
+  <!--개인정보 수집 레이어 -->
+  <div class="full-layer-wrap off">
+    <div class="container">
+      <div class="top">
+        <a href="javascript:void(0)" class="icon close-btn">닫기</a>
+      </div>
+      <div class="body">
+        <div class="term-wrap">
+          <h3>개인정보 수집 및 이용 동의 안내</h3>
+          <ol>
+            <li>개인정보의 수집·이용 목적: 자동차보험 만기일 알림 서비스 및 이벤트 참여</li>
+            <li>수집하는 개인정보의 항목: 이름, 휴대전화 번호, 자동차정보, 자동차보험 만기일</li>
+            <li>개인정보의 보유·이용 기간: 해당 서비스 이용 종료 시 즉시 파기</li>
+            <li>개인정보의 수집 및 이용에 대한 동의를 거부할 수 있으며, 이 경우 서비스 이용이 제한됩니다.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--제 3자 정보 제공 동의 안내 레이어 -->
+  <div class="full-layer-wrap off">
+    <div class="container">
+      <div class="top">
+        <a href="javascript:void(0)" class="icon close-btn">닫기</a>
+      </div>
+      <div class="body">
+        <div class="term-wrap">
+          <h3>개인정보의 제 3자 정보 제공 동의 및 처리위탁 동의 안내</h3>
+          <p>주식회사 해빗팩토리는 「신용정보의 이용 및 보호에 관한 법률」, 「전자금융거래법」 및 「전자금융감독규정」, 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관련 법규에 따라 이용자로부터 아래와 같이 "개인정보 제3자 정보 제공 동의" 및 "수집한 개인정보의 처리위탁"에 대한 동의를 받고자 합니다. <br>보다 자세한 내용은 회사의 개인정보처리방침을 참조하여 주시기 바랍니다.</p>
+          <ul>
+            <li>
+              <div class="tit">1. 제3자 정보 제공</div>
+              <ul class="dash-list">
+                <li>제공받는 자의 개인(신용)정보 이용 목적 : 자동차 정보 조회</li>
+                <li>제공받는 곳 : (주)차봇모빌리티</li>
+                <li>제공항목 : 이름, 휴대전화 번호, 자동차정보, 자동차보험 만기일</li>
+                <li>보유·이용기간 : 서비스 제공 목적 달성 시 즉시 파기(관련 법령에 따라 보존할 필요가 있는 경우는 해당 보조 기간)</li>
+              </ul>
+            </li>
+            <li>
+              <div class="tit">2. 개인정보의 위탁취급</div>
+              <div class="sub-tit">(a) 위탁 업체 : (주)코드에프</div>
+              <ul class="dash-list">
+                <li>위탁업무의 내용 : (1) 신용정보주체의 인증 정보를 이용하여 개인(신용)정보를 중계하는 업무 (2) API 서비스 품질향상 및 업무 대응을 위해 신용정보주체 인증 정보를 통한 요청/응답 데이터 저장 업무(위탁 계약 종료 시 일괄 삭제) (3) 정보주체의 개인정보 열람, 정정.삭제, 처리 정지 요청 등을 처리</li>
+                <li>위탁정보 : (1) 개인(신용)정보 (2) 요청/응답 데이터 일체 (3) 기업정보</li>
+                <li>보유 및 이용기간 : 위탁 계약 종료 시까지</li>
+              </ul>
+              <br>
+              <div class="sub-tit">(b) 위탁업체 : 삼정데이타서비스(주)</div>
+              <ul class="dash-list">
+                <li>위탁업무의 내용 : 카카오톡 알림톡 발송, 문자메시지 발송, 이메일 발송</li>
+                <li>위탁정보 : 이름, 휴대전화 번호</li>
+                <li>보유 및 이용기간 : 회원 탈퇴 또는 위탁 계약 종료 시</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    //약관 레이어 팝업 열기
+    $(".term-link").click(function() {
+      $(".full-layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //약관 레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".full-layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="#" class="icon close-btn">닫기</a>
+<!--    <a href="#" class="tel-btn">컨시어지 서비스</a>-->
+  </header>
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="title-wrap">
+        <h3>자동차 번호를 입력해 주세요</h3>
+      </div>
+      <form action="">
+        <ul>
+          <li>
+            <span class="input-tit">자동차(차대) 번호</span>
+            <div class="input-wrap">
+              <input type="text" placeholder="OO가OOOO">
+              <span class="inputclear icon">삭제</span>
+            </div>
+            <div class="helper-txt">7자 또는 8자로 입력해 주세요.</div>
+          </li>
+        </ul>
+        <div class="bottom-fixed-wrap">
+          <a href="#" class="submit-btn on">계속하기</a>
+        </div>
+      </form>
+      <a href="#" class="link-btn">자동차 구입 예정이세요?<br>그럼 여기서 예상 보험료를 확인해보세요.</a>
+    </div>
+  </div>
+  
+  <div class="layer-wrap">
+    <div class="dialog">
+      <h4>입력하신<br>자동차 번호가 맞나요?</h4>
+      <p>자동차 번호를 잘못 입력하면<br>정확한 보험료를 확인할 수 없어요.</p>
+      <div class="car-number">
+        <span>자동차(차대) 번호</span>
+        <strong>KNAET815HNK2262804</strong>
+      </div>
+      <div class="btn-wrap clearfx">
+        <a href="car-number.html" class="submit-btn border">다시 입력하기</a>
+        <a href="car-access.html" class="submit-btn on">계속하기</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

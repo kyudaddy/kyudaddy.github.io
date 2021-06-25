@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+*{-webkit-box-sizing: border-box;box-sizing: border-box;color: #212529;font-family: 'Spoqa Han Sans', sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-rendering: optimizeLegibility;}
+html, body, div, p, ol, ul, li, nav, section, h1, h2, h3, h4{margin: 0;padding: 0}
+html{height: -webkit-fill-available;}
+body {background-color: #fff;min-width: 320px;line-height:1.3;letter-spacing: -0.025em;-webkit-text-size-adjust:none;font-size: 15px;min-height: 100vh;/* mobile viewport bug fix */min-height: -webkit-fill-available;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block}
+nav, ul, li, dl, dt, dd {list-style:none;margin: 0;padding: 0}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after, q:before, q:after {content:'';content:none}
+a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration: none}
+button{border: 0;outline: 0}
+table {border-collapse:collapse;border-spacing:0}
+hr {display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+strong{color: inherit}
+input, select, textarea {vertical-align:middle;outline: none;cursor: pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-appearance:none;-moz-appearance: none;appearance: none;border-radius:0;border: none;resize: none;outline: none;}
+input[type=search]::-ms-clear {display: none;width : 0;height: 0;}
+.icon{background-repeat: no-repeat;background-size: contain;background-position: center;color: transparent;}
+.none{display: none}
+.container{max-width: 600px;margin: 0 auto;padding: 0 24px}
+
+.top{position: relative;background-color: #00BFAD;text-align: center;padding: 40px 0 24px}
+.top h1{font-size: 26px;color: #fff;margin-bottom: 10px}
+.top h1 strong{color: #FFE600}
+.top .close-btn{position: fixed;z-index: 2;right: 12px;top: 12px;width: 36px;height: 36px;background-image: url(../images/close-btn.svg);;background-color: transparent;}
+.top img{display: inline-block;height: 140px}
+
+.body{padding: 30px 0 } 
+.body p{font-size: 15px;color: #777;line-height: 1.45}
+
+.section{margin-bottom: 30px}
+.section .section-tit{margin-bottom: 8px}
+.section .section-tit h2{display: inline-block;font-size: 18px;color: #000;}
+.section .section-tit img{display: inline-block;width: 22px;height: 22px;margin-right: 6px;vertical-align: middle}
+
+.section .blit-list li{position: relative;color: #666;font-size: 14px;padding-left: 8px;margin-bottom: 6px}
+.section .blit-list li::before{content: "";position: absolute;left: 0;top: 8px;display: inline-block;vertical-align: middle;width: 4px;height: 4px;border-radius: 50%;background-color: #666}
+
+.section.accordion{position: relative}
+.section.accordion .accordion-btn{position: absolute;left: 0;top: 0;display: inline-block;width: 1px;height: 1px;opacity: 0}
+.section.accordion .accordion-btn + label{position: relative;display: block;width: 100%;border: none;background-color: #F5F6F9;color: #222;font-size: 14px;font-weight: bold;padding: 14px 16px 18px;text-align: left;border-radius: 6px}
+.section.accordion .accordion-btn + label::after{content: "";position: absolute;right: 16px;top: calc(50% - 20px/2);display: inline-block;width: 20px;height: 20px;background-image: url(../images/v-arrow.svg);background-repeat: no-repeat;background-size: contain;}
+.section.accordion .accordion-btn:checked + label::after{-webkit-transform: rotate(180deg);transform: rotate(180deg);top: calc(50% - 22px/2);}
+.section.accordion .accordion-txt{-webkit-transition: 0.3s;transition: 0.3s;height: 0;overflow: hidden;opacity: 0;padding: 18px 16px 20px;margin-top: 4px;background-color: #F5F6F9;color: #666;font-size: 14px;border-radius: 6px;margin-bottom: -30px}
+.section.accordion .accordion-btn:checked ~ .accordion-txt{height: auto;opacity: 1;margin-bottom: 0}
+
+.section.btn{margin-bottom: 0}
+.section.btn h3{font-size: 17px;color: #5C7CFA;text-align: center;margin-bottom: 16px}
+.kakao-btn{display: block;width: 100%;padding: 16px 0 18px;font-size: 18px;font-weight: bold;color: #381E1F;background-color: #FAE001;-webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);border-radius: 8px;}
+.kakao-btn .icon{display: inline-block;vertical-align: middle;margin-right: 10px;width: 24px;height: 24px;background-image: url(../images/kakao-icon.svg);}

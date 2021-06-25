@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+<!--    <a href="#" class="icon close-btn">닫기</a>-->
+<!--    <a href="#" class="tel-btn">컨시어지 서비스</a>-->
+    <h2 class="tit"></h2>
+  </header>
+  
+  
+  <div class="layer-wrap">
+    <div class="dialog">
+      <h4>아쉽게도 해당 자동차는<br>가격 비교가 어려워요</h4>
+<!--      <p class="tip"><strong>잠깐!</strong> 본인인증만 하면 끝난 거나 다름없어요.</p>-->
+      <p>일부 자동차는 가격 비교가 어려워 컨시어지 서비스를 이용해야만 가격 비교를 진행할 수 있어요.</p>
+      <a href="car-concierge.html" class="tel-btn">컨시어지 서비스</a>
+      <div class="btn-wrap clearfx">
+        <a href="car-concierge.html" class="submit-btn border">다른 자동차 조회</a>
+        <a href="car-info.html" class="submit-btn on">종료</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //셀렉트 버튼 클릭시
+    $(".select").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

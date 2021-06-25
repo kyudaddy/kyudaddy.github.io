@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>운전자보험 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="#" class="icon close-btn">닫기</a>
+  </header>
+  
+  <div class="wrap pdbt-btn">
+    <div class="container">
+      <div class="title-wrap">
+        <h3>{{고객명}}님 <br>운전자보험 가입이 완료되었어요!</h3>
+        <p>자세한 가입 내역은<br>입력하신 이메일 주소로 발송해드렸습니다.</p>
+      </div>
+      
+      <div class="info-list">
+        <h4>보험 계약 정보</h4>
+        <dl>
+          <dt>상품명</dt>
+          <dd>삼성화재 플랫폼회원상해보험(시그널플래너 운전자 플랜)</dd>
+        </dl>
+        <dl>
+          <dt>보험사</dt>
+          <dd>삼성화재</dd>
+        </dl>
+        <dl>
+          <dt>가입기간</dt>
+          <dd>2021.04.01 ~ 2022.04.01</dd>
+        </dl>
+        <dl>
+          <dt>보장내용</dt>
+          <dd>운전자 벌금 외 6개</dd>
+        </dl>
+      </div>
+      <ul class="caution-txt">
+        <li>가입 내용은 <strong>앱 내 설정 &gt; 시그널플래너에서 가입한 보험</strong>에서 확인해주세요</li>
+      </ul>
+      <div class="bottom-fixed-wrap">
+        <a href="insured-list.html" class="submit-btn on">보험 가입 내용 확인하기</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

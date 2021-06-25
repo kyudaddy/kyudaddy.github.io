@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>운전자보험 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="icon back-btn">뒤로</a>
+    <a href="#" class="icon close-btn">닫기</a>
+  </header>
+
+  <div class="wrap pdbt-btn">
+    <div class="container">
+      <div class="title-wrap">
+        <h3>보장을 선택해 주세요</h3>
+        <p>원하는 보장을 선택하고 안심하고 운전하세요.</p>
+      </div>
+      <a href="compare.html" class="link-block-btn">기본형/고급형 비교하기</a>
+      <form action="">
+        <ul class="check-list">
+          <li>
+            <div class="check-block">
+              <label for="type1">
+                <span class="text">기본형</span>
+                <span class="price">15,740</span>
+              </label>
+              <input type="radio" name="type" id="type1" checked>
+              <span class="check"></span>
+              <div class="box-wrap">
+                <ul class="blit">
+                  <li>교통상해 사망</li>
+                  <li>교통상해후유장해</li>
+                  <li>교통사고처리지원금 (동승포함)</li>
+                  <li>운전자 벌금</li>
+                  <li>변호사선임비용</li>
+                  <li>교통상해입원일당 보장</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>기본형에 4개 보장을 더해<br>더욱 든든하게 가입해 보세요</p>
+            <div class="check-block">
+              <label for="type2">
+                <span class="text">고급형</span>
+                <span class="price">29,790</span>
+              </label>
+              <input type="radio" name="type" id="type2">
+              <span class="check"></span>
+              <div class="box-wrap">
+                <ul class="blit">
+                  <li>교통상해 사망</li>
+                  <li>교통상해후유장해</li>
+                  <li>교통사고처리지원금 (동승포함)</li>
+                  <li>운전자 벌금</li>
+                  <li>변호사선임비용</li>
+                  <li>교통상해입원일당 보장</li>
+                </ul>
+              </div>
+            </div>
+            
+            <ul class="caution-txt">
+              <li>벌금, 자동차사고 변호사선임비용, 교통사고처리지원금 특약등은 다수계약(공제 계약을 포함)이 체결되어 있는 경우, 약관에 따라 비례하여 보상합니다.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="bottom-fixed-wrap">
+          <a href="confirm.html" class="submit-btn on">선택하기</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

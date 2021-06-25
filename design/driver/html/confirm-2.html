@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>운전자보험 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+<!--    <a href="#" class="icon back-btn">뒤로</a>-->
+    <a href="#" class="icon close-btn">닫기</a>
+  </header>
+  
+  <div class="wrap pdbt-btn">
+    <div class="container">
+      <div class="title-wrap">
+        <h3>보장내용 알아보기</h3>
+        <p>보장내용 얼마나 든든한지 자세히 확인해보세요.</p>
+      </div>
+      <ul class="caution-txt">
+        <li>보상기준: 자가용 운전자, 교통상해급수 1급,  남녀 공통, 만 19세~80세 미만,  일시납, 보험기간 1년</li>
+      </ul>
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <td>교통상해사망(특약)</td>
+            <td>3,000만원</td>
+          </tr>
+          <tr>
+            <td>교통상해후유장해(특약)</td>
+            <td>3,000만원</td>
+          </tr>
+          <tr>
+            <td>교통상해입원일당 보장(특약)</td>
+            <td>1만원</td>
+          </tr>
+          <tr>
+            <td>골절수술비(특약)</td>
+            <td>70만원</td>
+          </tr>
+          <tr>
+            <td>운전자 벌금(자가용)</td>
+            <td>2,000만원(스쿨존 3,000만원)</td>
+          </tr>
+          <tr>
+            <td>자동차사고 변호사선임비용(자가용)(특약)</td>
+            <td>500만원</td>
+          </tr>
+          <tr>
+            <td>교통사고처리지원금 (자가용, 동승자포함)</td>
+            <td>1억원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>

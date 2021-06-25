@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>시그널플래너 고객 관리자</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="https://suggest.signalplanner.co.kr/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://suggest.signalplanner.co.kr/css/jquery-ui-timepicker-addon.css" />
+  <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://suggest.signalplanner.co.kr/js/jquery.dataTables.min.js"></script>
+  <script src="https://suggest.signalplanner.co.kr/js/xlsx.full.min.js"></script>
+  <script src="https://suggest.signalplanner.co.kr/js/FileSaver.min.js"></script>
+  <script src="https://suggest.signalplanner.co.kr/js/jquery-ui-timepicker-addon.js"></script>
+  <script src="https://suggest.signalplanner.co.kr/js/common.js"></script>
+</head>
+
+<body>
+  <nav class="sidebar">
+    <a href="/adm" class="icon logo">고객DB수집</a>
+    <a href="javascript:void(0)" class="icon menu-btn">메뉴</a>
+    <ul class="menu-list">
+      <li><a href="/adm/car" data-menu="car">자동차보험비교목록</a></li>
+      <li>
+        <a href="#">보험몰 관리</a>
+        <ul>
+          <li><a href="#" class="on">보험 구매 정보</a></li>
+          <li><a href="#">해지 및 환불 정보</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">가입 내역 제공</a>
+        <ul>
+          <li><a href="#">삼성화재 운전자보험</a></li>
+        </ul>
+      </li>
+      <li><a href="/adm/manager/edit" data-menu="manager">관리자정보</a></li>
+      <li><a href="/adm/login/logout">로그아웃</a></li>
+    </ul>
+  </nav>
+  <main class="main-wrap">
+    <div class="card-wrap">
+      <h1>보험 구매 상세</h1>
+      <div class="table-wrap">
+        <h2>구매자 정보</h2>
+        <div class="dataTables_wrapper no-footer">
+          <div id="maternity_processing" class="dataTables_processing" style="display: none;">처리중...</div>
+          <table id="maternity" class="display dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="maternity_info">
+            <thead>
+              <tr role="row">
+                <th class="sorting" tabindex="0" aria-controls="maternity" rowspan="1" colspan="1" aria-sort="ascending">기기구분</th>
+                <th class="sorting" tabindex="0" aria-controls="maternity" rowspan="1" colspan="1" >유입채널</th>
+                <th class="sorting" tabindex="0" aria-controls="maternity" rowspan="1" colspan="1" >HUID</th>
+                <th class="sorting" tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">이름(피보험자)</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">전화번호</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">이메일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row" class="odd">
+                <td class="alignCenter">AOS</td>
+                <td class="alignCenter">CUSTOMER</td>
+                <td class="alignCenter">123456</td>
+                <td class="alignCenter">이종욱</td>
+                <td class="alignCenter">010-2659-2179</td>
+                <td class="alignCenter">ongook55@gmail.com</td>
+              </tr>
+              <tr role="row" class="even">
+                <td class="alignCenter">AOS</td>
+                <td class="alignCenter">CUSTOMER</td>
+                <td class="alignCenter">123456</td>
+                <td class="alignCenter">이종욱</td>
+                <td class="alignCenter">010-2659-2179</td>
+                <td class="alignCenter">ongook55@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <div class="table-wrap">
+        <h2>보험 구매 정보</h2>
+        <div class="dataTables_wrapper no-footer">
+          <div class="dataTables_processing" style="display: none;">처리중...</div>
+          <table class="display dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="maternity_info">
+            <thead>
+              <tr role="row">
+                <th class="sorting" tabindex="0" aria-controls="maternity" rowspan="1" colspan="1" aria-sort="ascending">주문번호</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">보험사명</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">보험명</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">결제금액</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">결제일</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">결제방법</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">결제정보</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">보험시작일</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">보험만기일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row" class="odd">
+                <td class="alignCenter">123456</td>
+                <td class="alignCenter">삼성화재</td>
+                <td class="alignCenter">운전자보험</td>
+                <td class="alignCenter">29,720원</td>
+                <td class="alignCenter">2020-02-02</td>
+                <td class="alignCenter">카드</td>
+                <td class="alignCenter">현대카드</td>
+                <td class="alignCenter">2020-02-02</td>
+                <td class="alignCenter">2020-02-02</td>
+              </tr>
+              <tr role="row" class="even">
+                <td class="alignCenter">123456</td>
+                <td class="alignCenter">삼성화재</td>
+                <td class="alignCenter">운전자보험</td>
+                <td class="alignCenter">29,720원</td>
+                <td class="alignCenter">2020-02-02</td>
+                <td class="alignCenter">카드</td>
+                <td class="alignCenter">현대카드</td>
+                <td class="alignCenter">2020-02-02</td>
+                <td class="alignCenter">2020-02-02</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <div class="table-wrap">
+        <h2>해지 정보</h2>
+        <div class="dataTables_wrapper no-footer">
+          <div class="dataTables_processing" style="display: none;">처리중...</div>
+          <table class="display dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="maternity_info">
+            <thead>
+              <tr role="row">
+                <th class="sorting" tabindex="0" aria-controls="maternity" rowspan="1" colspan="1" aria-sort="ascending">해지여부</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">해지일</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">환불계좌</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">환불 계산 금액</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">환불 상태</th>
+                <th tabindex="0" aria-controls="maternity" rowspan="1" colspan="1">환불 처리일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row" class="odd">
+                <td class="alignCenter">Y</td>
+                <td class="alignCenter">해지일</td>
+                <td class="alignCenter">12341234123</td>
+                <td class="alignCenter">29,720원</td>
+                <td class="alignCenter">완료</td>
+                <td class="alignCenter">2020-02-02</td>
+              </tr>
+              <tr role="row" class="even">
+                <td class="alignCenter">Y</td>
+                <td class="alignCenter">해지일</td>
+                <td class="alignCenter">12341234123</td>
+                <td class="alignCenter">29,720원</td>
+                <td class="alignCenter">완료</td>
+                <td class="alignCenter">2020-02-02</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <div class="bottom-btn-wrap">
+        <a href="#">목록으로 가기</a>
+      </div>
+    </div>
+  </main>
+  <div class="layer-wrap">
+    <div class="dialog">
+      <h4>해지 요청일을 선택해 주세요</h4>
+      <input type="date">
+      <div class="btn-wrap clearfx">
+        <a href="car-concierge.html" class="submit-btn border">취소</a>
+        <a href="car-info.html" class="submit-btn on">해지</a>
+      </div>
+    </div>
+<!--
+    <div class="dialog">
+      <h4>해지가 완료되었습니다.</h4>
+      <div class="btn-wrap clearfx">
+        <a href="car-concierge.html" class="submit-btn border">해지리스트</a>
+        <a href="car-info.html" class="submit-btn on">확인</a>
+      </div>
+    </div>
+-->
+  </div>
+  <script>
+    //메뉴 버튼 클릭시 on 클래스 토글
+    $(".menu-btn").click(function() {
+      $(".menu-list").toggleClass("on");
+    });
+  </script>
+</body>
+
+</html>

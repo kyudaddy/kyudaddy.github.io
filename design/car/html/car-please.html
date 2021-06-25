@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>자동차 보험 비교 - 시그널플래너</title>
+  <link rel="stylesheet" type="text/css" href="../css/local-style.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+  <header>
+<!--    <a href="#" class="icon back-btn">뒤로</a>-->
+    <a href="#" class="icon close-btn">닫기</a>
+<!--    <a href="#" class="tel-btn">컨시어지 서비스</a>-->
+  </header>
+  
+  <div class="wrap">
+    <div class="container">
+      <div class="title-wrap">
+        <h4>앗 고객님  아직 만기일이 많이 남으셨네요! <br>만기 30일 전에는 보험 가입을 할 수 없어요.</h4>
+        <h3>만기일에 맞춰<br>저희가 안내해드릴게요</h3>
+        <p>보험 비교에서 보험을 가입하면 <strong>2만 5천 원</strong>,  만기 알림 신청 시 <strong>5천 원 상품권</strong>을 드려요.</p>
+      </div>
+      <br>
+      <img src="../images/image-phone.png" alt="시그널플래너.00 고객님의 자동차보험 만기일이 다가와요. 보험료 비교를 통해 최저로 갱신하세요.">
+      
+      <div class="notice-txt">헛수고했다고요? 걱정 마세요!<br>지금 입력하신 정보는 번거롭지 않게 기억해두었다가 갱신하실 때 최저 보험료를 확인하고 가입할 수 있게 도와드릴게요. </div>
+      
+      <div class="bottom-fixed-wrap">
+        <a href="car-number-pre-3.html" class="submit-btn on">안내받기<span class="icon arrow"></span></a>
+        <a href="#" class="submit-btn txt">다음에</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    //input type clear button
+    function ClearButton() {
+      $('.input-wrap :input').on('keydown focus', function() {
+        if ($(this).val().length > 0) {
+          $(this).nextAll('.inputclear').removeClass('i-none');
+        }
+      }).on('keydown keyup blur', function() {
+        if ($(this).val().length === 0) {
+          $(this).nextAll('.inputclear').addClass('i-none');
+        }
+      });
+      $('.inputclear').on('click', function() {
+        $(this).addClass('i-none').prevAll(':input').val('');
+      });
+    }
+    ClearButton();
+
+    //레이어 팝업 열기
+    $(".term-btn").click(function() {
+      $(".layer-wrap").removeClass("off");
+      $("body").addClass("no-scroll");
+    })
+
+    //레이어 팝업 닫기
+    $(".close-btn").click(function() {
+      $(".layer-wrap").addClass("off");
+      $("body").removeClass("no-scroll");
+    })
+  </script>
+
+</body>
+
+</html>
