@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>자동차 보험 비교 - 시그널플래너</title>
   <link rel="stylesheet" href="https://suggest-dev.signalplanner.co.kr/css/swiper.css">
   <link rel="stylesheet" type="text/css" href="../css/local-style.css">
@@ -13,9 +14,9 @@
 <body>
   <div class="wrap">
     <div class="result-wrap">
-    <a href="#" class="tel-btn">컨시어지 서비스++</a>
+      <a href="#" class="tel-btn">컨시어지 서비스</a>
       <a href="car-landing.html" class="icon close-btn">닫기</a>
-<!--
+      <!--
       <div class="car-info-wrap">
         <p>만기까지 30일 남음(2020년 00월 00일)</p>
         <span class="maker">제조사명</span>
@@ -44,11 +45,12 @@
         <img src="../images/car-defalt.svg" alt="자동차 이미지">
       </div>
     </div>
-<!--    <p class="notice-txt">아직 갱신 가능한 날짜가 안되었습니다. 갱신 가능한 때 다시 알려드릴게요. 만약, 전화 상담이 필요하시다면 컨시어지 서비스를 이용하세요.</p>-->
+    <!--    <p class="notice-txt">아직 갱신 가능한 날짜가 안되었습니다. 갱신 가능한 때 다시 알려드릴게요. 만약, 전화 상담이 필요하시다면 컨시어지 서비스를 이용하세요.</p>-->
     <ul class="result-list">
       <li class="direct">
         <div class="insurance">
-          <span class="icon"><img src="../images/company-axa.png" alt="현대해상"></span><span class="name">현대해상</span><span class="rec-icon">빠른가입</span>
+          <span class="icon"><img src="../images/company-axa.png" alt="현대해상"></span><span class="name">현대해상</span><span
+            class="rec-icon">빠른가입</span>
           <p>35만 원 이상 가입 시 2만 원 혜택</p>
           <div class="benefit">
             <span class="block">삼성카드 등 총 4개 카드사 최대 3만원 혜택</span>
@@ -60,7 +62,8 @@
       </li>
       <li class="direct">
         <div class="insurance">
-          <span class="icon"><img src="../images/company-carrot.png" alt="캐롯손해보험"></span><span class="name">캐롯손해보험</span><span class="rec-icon">빠른가입</span>
+          <span class="icon"><img src="../images/company-carrot.png" alt="캐롯손해보험"></span><span
+            class="name">캐롯손해보험</span><span class="rec-icon">빠른가입</span>
           <p>30만 원 이상 가입 시 2만 원 혜택</p>
           <div class="price"><strong>1,263,990</strong></div>
           <p class="sm-txt">위 보험금액은 연간 24,000km으로 계산된 금액입니다. 상품 특성상 실제 주행 거리가 짧을수록 더욱 저렴해지니 참고해 주세요.</p>
@@ -99,7 +102,7 @@
       </li>
       <!--5개 이후 더 보기 버튼 추가 -->
       <li>
-          <a href="#" class="submit-btn more">더 보기<span class="icon"></span></a>
+        <a href="#" class="submit-btn more">더 보기<span class="icon"></span></a>
       </li>
       <!--캐로셀형 광고 -->
       <li>
@@ -162,7 +165,7 @@
       </div>
     </footer>
   </div>
-      
+
   <script src="https://suggest-dev.signalplanner.co.kr/js/swiper.js"></script>
   <script>
     //슬라이드
@@ -172,38 +175,38 @@
         el: '.swiper-pagination',
       }
     });
-    
+
     //input type clear button
     function ClearButton() {
-      $('.input-wrap :input').on('keydown focus', function() {
+      $('.input-wrap :input').on('keydown focus', function () {
         if ($(this).val().length > 0) {
           $(this).nextAll('.inputclear').removeClass('i-none');
         }
-      }).on('keydown keyup blur', function() {
+      }).on('keydown keyup blur', function () {
         if ($(this).val().length === 0) {
           $(this).nextAll('.inputclear').addClass('i-none');
         }
       });
-      $('.inputclear').on('click', function() {
+      $('.inputclear').on('click', function () {
         $(this).addClass('i-none').prevAll(':input').val('');
       });
     }
     ClearButton();
 
     //레이어 팝업 열기
-    $(".term-btn").click(function() {
+    $(".term-btn").click(function () {
       $(".layer-wrap").removeClass("off");
       $("body").addClass("no-scroll");
     })
 
     //셀렉트 버튼 클릭시
-    $(".select").click(function() {
+    $(".select").click(function () {
       $(".layer-wrap").removeClass("off");
       $("body").addClass("no-scroll");
     })
 
     //레이어 팝업 닫기
-    $(".close-btn").click(function() {
+    $(".close-btn").click(function () {
       $(".layer-wrap").addClass("off");
       $("body").removeClass("no-scroll");
     })
