@@ -32,7 +32,10 @@ header{position: -webkit-sticky;position: sticky;top: 0;z-index: 99;background-c
 header > .icon{position: absolute;top: 0;width: 60px;height: 60px}
 header > .back-btn{left: 0;background-image: url(/design/car/images/back-btn.svg)}
 header > .close-btn{right: 0;background-image: url(/design/car/images/close-btn.svg)}
-header > .tel-btn{position: absolute;right: 60px;top: 15px;display: inline-block;color: #5C7CFA;padding: 5px 13px 7px 28px;border: 1px solid #5C7CFA;border-radius: 15px;font-size: 13px;font-weight: bold;background-image: url(/design/car/images/tel-icon.svg);background-size: 12px 12px;background-position: 12px 50%;background-repeat: no-repeat}
+header > .tel-btn{position: absolute;right: 14px;top: 15px;display: inline-block;color: #5C7CFA;padding: 5px 13px 7px 28px;border: 1px solid #5C7CFA;border-radius: 15px;font-size: 13px;font-weight: bold;background-image: url(/design/car/images/tel-icon.svg);background-size: 12px 12px;background-position: 12px 50%;background-repeat: no-repeat}
+header > .tel-btn:nth-last-of-type(2),
+header > .tel-btn:nth-of-type(3){right: 60px}
+
 header > .link-btn{position: absolute;right: 60px;top: 15px;display: inline-block;color: #5C7CFA;padding: 5px 13px 7px;border: 1px solid #5C7CFA;border-radius: 15px;font-size: 13px;font-weight: bold;margin: 0;text-decoration: none}
 header > .tit{font-size: 17px;font-weight: bold;text-align: center;line-height: 58px;color: #415376}
 header > .logo{width: 130px;height: auto;position: fixed;top: 24px;left: calc(100% / 2 - 65px);}
@@ -443,7 +446,9 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-wrap{position: relative;background-color: #525F7A;margin-top: -20px;padding: 60px 20px 30px}
 .result-wrap *{color: #fff}
 .result-wrap .close-btn{position: absolute;top: 0;right: 0;width: 60px;height: 60px;background-image: url(/design/car/images/close-btn-w.svg)}
-.result-wrap .tel-btn{position: absolute;right: 60px;top: 15px;display: inline-block;color: #5C7CFA;padding: 5px 13px 7px 28px;border-radius: 15px;font-size: 13px;font-weight: bold;background-image: url(/design/car/images/tel-icon.svg);background-size: 12px 12px;background-position: 12px 50%;background-repeat: no-repeat;background-color: #fff}
+.result-wrap .tel-btn{position: absolute;right: 14px;top: 15px;display: inline-block;color: #5C7CFA;padding: 5px 13px 7px 28px;border-radius: 15px;font-size: 13px;font-weight: bold;background-image: url(/design/car/images/tel-icon.svg);background-size: 12px 12px;background-position: 12px 50%;background-repeat: no-repeat;background-color: #fff}
+.result-wrap .tel-btn:nth-last-of-type(2),
+.result-wrap .tel-btn:nth-of-type(3){right: 60px}
 
 .result-wrap .car-info-wrap{position: relative}
 .result-wrap .car-info-wrap p{margin-bottom: 4px;font-size: 14px;font-weight: bold}
