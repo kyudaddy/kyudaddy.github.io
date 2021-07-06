@@ -108,7 +108,7 @@ header > .logo > img{max-width: 100%;display: block}
 
 
 /*공통 스타일==============*/
-.wrap{padding-top: 20px;padding-bottom: 140px;overflow-x: hidden}
+.wrap{padding-top: 20px;padding-bottom: 140px;}
 .wrap.v-center{height: calc(100vh - 60px);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column} 
 .wrap img{display: block;max-width: 100%;margin: 0 auto}
 .title-wrap{margin-bottom: 40px} 
@@ -180,7 +180,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .btn-wrap .submit-btn .icon.tel{background-image: url(/design/car/images/tel-icon.svg);background-size: 85%}
 .submit-btn.on .icon.tel {width: 16px;height: 16px;margin-right: 6px;vertical-align: middle;background-image: url(/design/car/images/tel-icon-w.svg);background-size: 85%}
 
-.bottom-fixed-wrap{position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
+.bottom-fixed-wrap{z-index: 100;position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
 .bottom-fixed-wrap > *{margin: 0}
 .bottom-fixed-wrap .term-wrap{margin-bottom: 24px}
 .bottom-fixed-wrap .term-wrap .check-all{text-align: left;padding: 9px 10px 11px;margin-bottom: 10px}
@@ -446,7 +446,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-wrap{position: relative;background-color: #525F7A;margin-top: -20px;padding: 60px 20px 30px}
 .result-wrap *{color: #fff}
 .result-wrap .close-btn{position: absolute;top: 0;right: 0;width: 60px;height: 60px;background-image: url(/design/car/images/close-btn-w.svg)}
-.result-wrap .tel-btn{position: absolute;right: 14px;top: 15px;display: inline-block;color: #5C7CFA;padding: 5px 13px 7px 28px;border-radius: 15px;font-size: 13px;font-weight: bold;background-image: url(/design/car/images/tel-icon.svg);background-size: 12px 12px;background-position: 12px 50%;background-repeat: no-repeat;background-color: #fff}
+.result-wrap .tel-btn{position: absolute;right: 14px;top: 15px;display: inline-block;color: #5C7CFA;padding: 5px 13px 7px 28px;border: 1px solid #5C7CFA;border-radius: 15px;font-size: 13px;font-weight: bold;background-image: url(/design/car/images/tel-icon.svg);background-size: 12px 12px;background-position: 12px 50%;background-repeat: no-repeat;background-color: #fff}
 .result-wrap .tel-btn:nth-last-of-type(2),
 .result-wrap .tel-btn:nth-of-type(3){right: 60px}
 
@@ -477,7 +477,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .insurance .icon img{display: block;color: transparent;width: inherit;height: inherit;-o-object-fit: contain;object-fit: contain;-o-object-position: center;object-position: center}
 .result-list li .insurance .name{color: #506591;font-size: 21px;font-weight: bold}
 .result-list li .insurance .rec-icon{margin-left: 6px;background-color: #5C7CFA;border-radius: 4px;color: #fff;font-weight: bold;font-size: 12px;padding: 3px 6px 4px}
-.result-list li .insurance p{margin-top: 8px;color: #6E84AF;font-size: 15px}
+.result-list li .insurance p{margin-top: 8px;color: #506591;font-size: 15px}
 .result-list li .insurance .benefit{color: #8ca2ce;margin-top: 12px}
 .result-list li .insurance .benefit .block{display: inline-block;font-size: 13px;font-weight: bold;border: 1px solid #aebede;border-radius: 16px;padding: 4px 12px 5px;color: inherit;margin: 0 4px 6px 0}
 .result-list li .insurance .benefit p{color: inherit;font-size: 14px;margin: 0 0 0 3px}
@@ -511,6 +511,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .ad-swiper .swiper-pagination-bullet{background-color: #899ABE;opacity: 0.35;margin: 0 3px}
 .result-list li .ad-swiper .swiper-pagination-bullet-active{background-color: #899ABE;opacity: 1}
 
+.result-list + .bottom-fixed-wrap{position: sticky;padding: 20px 16px;background: #fff;}
+.result-list + .bottom-fixed-wrap > p{text-align: center;color: #999;font-size: 13px;margin-bottom: 10px;}
 
 
 /*푸터===============*/

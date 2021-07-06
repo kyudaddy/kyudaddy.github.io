@@ -108,7 +108,7 @@ header > .logo > img{max-width: 100%;display: block}
 
 
 /*공통 스타일==============*/
-.wrap{padding-top: 20px;padding-bottom: 140px;overflow-x: hidden}
+.wrap{padding-top: 20px;padding-bottom: 140px;}
 .wrap.v-center{height: calc(100vh - 60px);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column} 
 .wrap img{display: block;max-width: 100%;margin: 0 auto}
 .title-wrap{margin-bottom: 40px} 
@@ -180,7 +180,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .btn-wrap .submit-btn .icon.tel{background-image: url(../images/tel-icon.svg);background-size: 85%}
 .submit-btn.on .icon.tel {width: 16px;height: 16px;margin-right: 6px;vertical-align: middle;background-image: url(../images/tel-icon-w.svg);background-size: 85%}
 
-.bottom-fixed-wrap{position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
+.bottom-fixed-wrap{z-index: 100;position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
 .bottom-fixed-wrap > *{margin: 0}
 .bottom-fixed-wrap .term-wrap{margin-bottom: 24px}
 .bottom-fixed-wrap .term-wrap .check-all{text-align: left;padding: 9px 10px 11px;margin-bottom: 10px}
@@ -511,6 +511,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .ad-swiper .swiper-pagination-bullet{background-color: #899ABE;opacity: 0.35;margin: 0 3px}
 .result-list li .ad-swiper .swiper-pagination-bullet-active{background-color: #899ABE;opacity: 1}
 
+.result-list + .bottom-fixed-wrap{position: sticky;padding: 20px 16px;background: #fff;}
+.result-list + .bottom-fixed-wrap > p{text-align: center;color: #999;font-size: 13px;margin-bottom: 10px;}
 
 
 /*푸터===============*/
