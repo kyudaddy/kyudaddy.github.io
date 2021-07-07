@@ -179,6 +179,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .btn-wrap .submit-btn .icon.return{background-image: url(../images/thecheck-return-icon.svg)}
 .btn-wrap .submit-btn .icon.tel{background-image: url(../images/thecheck-tel-icon.svg);background-size: 85%}
 .submit-btn.on .icon.tel {width: 16px;height: 16px;margin-right: 6px;vertical-align: middle;background-image: url(../images/tel-icon-w.svg);background-size: 85%}
+.btn-wrap.vertical{flex-direction: column;}
+.btn-wrap.vertical .submit-btn{display: block;width: 100%;margin: 4px 0;}
 
 .bottom-fixed-wrap{z-index: 100;position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
 .bottom-fixed-wrap > *{margin: 0}
@@ -344,7 +346,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .layer-wrap{z-index: 999;position: fixed;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;max-width: 420px;overflow-x: hidden;margin: 0 auto;background-color: rgba(0,0,0,0.6);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center}
 .layer-wrap.off{display: none}
 .layer-wrap .dialog{position: relative;text-align: center;background-color: #fff;padding: 30px 20px;border-radius: 10px;width: 80%;max-width: 330px;-webkit-box-shadow: 0px 10px 14px rgba(3, 3, 3, 0.5);box-shadow: 0px 10px 14px rgba(3, 3, 3, 0.5)}
-.layer-wrap .dialog h4{color: #4a4a4a;font-size: 21px}
+.layer-wrap .dialog h4{color: #4a4a4a;font-size: 20px}
 .layer-wrap .dialog h5{color: #4a4a4a;font-size: 17px;margin-bottom: 16px}
 .layer-wrap .dialog p{margin-top: 12px;font-size: 14px;color: #4a4a4a}
 .layer-wrap .dialog p strong{color: #44bbcc;font-weight: bold}
