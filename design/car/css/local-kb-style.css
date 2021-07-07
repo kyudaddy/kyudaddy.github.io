@@ -53,7 +53,7 @@ header > .logo > img{max-width: 100%;display: block}
 
 
 /*랜딩페이지==============*/
-.landing-tit{color: #56534A;font-size: 28px;text-align: center;margin-bottom: 24px}
+.landing-tit{color: #56534A;font-size: 26px;text-align: center;margin-bottom: 24px}
 .landing-subtit{color: #56534A;font-size: 15px;text-align: center;margin-bottom: 3px}
 .flash-txt{text-align: center;margin: -10px auto 24px;width: 220px;color: #715800;font-size: 13px;font-weight: 500;background: rgba(255, 241, 0, 0.2);border: 1px solid #FFDD66;border-radius: 6px;padding: 7px 8px 7px 0}
 .flash-txt::before{content: "";display: inline-block;vertical-align: middle;margin-right: 6px;width: 18px;height: 18px;background-image: url(../images/emoji-flash.png);background-repeat: no-repeat;background-size: contain;}
@@ -108,7 +108,7 @@ header > .logo > img{max-width: 100%;display: block}
 
 
 /*공통 스타일==============*/
-.wrap{padding-top: 20px;padding-bottom: 140px;overflow-x: hidden}
+.wrap{padding-top: 20px;padding-bottom: 140px;}
 .wrap.v-center{height: calc(100vh - 60px);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column} 
 .wrap img{display: block;max-width: 100%;margin: 0 auto}
 .title-wrap{margin-bottom: 40px} 
@@ -180,7 +180,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .btn-wrap .submit-btn .icon.tel{background-image: url(../images/kb-tel-icon.svg);background-size: 85%}
 .submit-btn.on .icon.tel {width: 16px;height: 16px;margin-right: 6px;vertical-align: middle;background-image: url(../images/kb-tel-icon.svg);background-size: 85%}
 
-.bottom-fixed-wrap{position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
+.bottom-fixed-wrap{z-index: 100;position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
 .bottom-fixed-wrap > *{margin: 0}
 .bottom-fixed-wrap .term-wrap{margin-bottom: 24px}
 .bottom-fixed-wrap .term-wrap .check-all{text-align: left;padding: 9px 10px 11px;margin-bottom: 10px}
@@ -193,7 +193,6 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .bottom-fixed-wrap .term-wrap label a{text-decoration: underline;color: inherit;margin: 0}
 .bottom-fixed-wrap .bubble{position: absolute;top: -20px;right: calc(50% - 170px/2);display: inline-block;font-size: 12px;color: #fff;padding: 7px 14px 8px;border-radius: 6px;background-color: #1BC2B2;-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)}
 .bottom-fixed-wrap .bubble:after {top: 100%;left: 50%;border: solid transparent;content: "";height: 0;width: 0;position: absolute;pointer-events: none;border-color: rgba(237, 242, 255, 0);border-top-color: #1BC2B2;border-width: 6px;margin-left: -6px}
-
 
 .link-btn{display: inline-block;color: #4C6EF5;font-size: 14px;font-weight: 500;text-decoration: underline;margin-top: 24px}
 
@@ -246,7 +245,6 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .check-list p{font-size: 14px;color: #78756e;margin-top: 6px}
 .check-list p strong{color: #56534A}
 
-
 .type-wrap{margin-bottom: 30px}
 .type-wrap label{position: relative;display: inline-block;float: left;width: calc(33.33% - 6px);padding: 14px 0 18px 12px;border: 1px solid #E5E9F1;border-radius: 4px}
 .type-wrap label ~ label{margin-left: 8px}
@@ -277,7 +275,6 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .relative-wrap label .text{font-size: 15px;font-weight: bold;color: #CCCBC9}
 .relative-wrap label input:checked ~ .text{color: #56534A}
 .relative-wrap label input:checked ~ .text::after{content: "";position: absolute;right: -1px;left: -1px;top: -1px;bottom: -1px;border: 2px solid #56534A;border-radius: 4px}
-
 
 .input-wrap.social-number{display: -webkit-box;display: -ms-flexbox;display: flex}
 .input-wrap.social-number > input{width: 60%} 
@@ -475,7 +472,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .insurance span{display: inline-block;vertical-align: middle}
 .result-list li .insurance .icon{width: 22px;height: 22px;border-radius: 50%;-webkit-box-shadow: 0 0 8px rgba(82, 95, 122, 0.15);box-shadow: 0 0 8px rgba(82, 95, 122, 0.15);margin-right: 6px;overflow: hidden}
 .result-list li .insurance .icon img{display: block;color: transparent;width: inherit;height: inherit;-o-object-fit: contain;object-fit: contain;-o-object-position: center;object-position: center}
-.result-list li .insurance .name{color: #56534A;font-size: 21px;font-weight: bold}
+.result-list li .insurance .name{color: #56534A;font-size: 20px;font-weight: bold}
 .result-list li .insurance .rec-icon{margin-left: 6px;background-color: #FFCA26;border-radius: 4px;color: #56534A;font-weight: bold;font-size: 12px;padding: 3px 6px 4px}
 .result-list li .insurance p{margin-top: 8px;color: #9A9892;font-size: 15px}
 .result-list li .insurance .sm-txt{margin-top: 8px;font-size: 12px}
@@ -506,6 +503,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .ad-swiper .swiper-pagination-bullet{background-color: #9A9892;opacity: 0.35;margin: 0 3px}
 .result-list li .ad-swiper .swiper-pagination-bullet-active{background-color: #9A9892;opacity: 1}
 
+.result-list + .bottom-fixed-wrap{position: sticky;padding: 20px 16px;background: #fff;}
+.result-list + .bottom-fixed-wrap > p{text-align: center;color: #999;font-size: 13px;margin-bottom: 10px;}
 
 
 /*푸터===============*/
