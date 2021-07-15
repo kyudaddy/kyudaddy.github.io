@@ -58,7 +58,7 @@ header > .logo > img{max-width: 100%;display: block}
 .flash-txt{text-align: center;margin: -10px auto 24px;width: 220px;color: #715800;font-size: 13px;font-weight: 500;background: rgba(255, 241, 0, 0.2);border: 1px solid #FFDD66;border-radius: 6px;padding: 7px 8px 7px 0}
 .flash-txt::before{content: "";display: inline-block;vertical-align: middle;margin-right: 6px;width: 18px;height: 18px;background-image: url(/design/car/images/emoji-flash.png);background-repeat: no-repeat;background-size: contain;}
 .section-wrap{border-bottom: 1px solid #EBEEF4;padding: 32px 0}
-.section-wrap:first-of-type{background-color: #f1f3f5;margin: 0 -20px;padding: 26px 26px 20px;border-bottom: none}
+.section-wrap:first-of-type{background-color: #f1f3f5;margin: 0 -20px;padding: 26px 26px 20px;border-bottom: none;overflow-x: hidden;}
 .section-wrap .tit{font-size: 17px;color: #4a4a4a;margin-bottom: 14px}
 .section-wrap > p{color: #4a4a4a;font-size: 14px;line-height: 1.4}
 .section-wrap > p strong{color: #4a4a4a}
