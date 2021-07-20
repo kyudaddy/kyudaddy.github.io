@@ -91,10 +91,11 @@ header > .logo > img{max-width: 100%;display: block}
 .section-wrap .car-info-wrap .info-btn{display: inline-block;margin-top: 24px;font-size: 12px;background-color: rgba(255,255,255,0.2);padding: 5px 20px 7px 9px;border-radius: 4px;background-image: url(/design/car/images/link-btn-icon.svg);background-repeat: no-repeat;background-position: calc(100% - 8px) 45%;background-size: 9px 9px}
 .section-wrap .car-info-wrap.concierge .tit{display: block;color: #333;font-size: 21px;font-weight: bold;margin-bottom: 6px;} 
 .section-wrap .car-info-wrap.concierge .date{display: block;color: #888;font-size: 13px} 
-.section-wrap .car-info-wrap.concierge *[class*="state-"]{margin-top: 12px;display: inline-block;background: #FF6687;border-radius: 4px;font-size: 13px;color: #fff;padding: 4px 12px 6px} 
+.section-wrap .car-info-wrap.concierge *[class*="state-"]{margin-top: 12px;display: inline-block;background: #FCA8B9;border-radius: 4px;font-size: 13px;color: #fff;padding: 4px 12px 6px} 
 .section-wrap .car-info-wrap.concierge .state-2{background-color: #FA5273}
-.section-wrap .car-info-wrap.concierge .state-3{background-color: #B84B60}
-.section-wrap .car-info-wrap.concierge .state-4{background-color: #FF7A9B}
+.section-wrap .car-info-wrap.concierge .state-3{background-color: #C52645}
+.section-wrap .car-info-wrap.concierge .state-4{background-color: #692D39}
+.section-wrap .car-info-wrap.concierge .state-5{background-color: #B3B3B3}
 
 .section-wrap .result-list li{padding: 0}
 .section-wrap .result-list li .insurance{border: none;padding: 24px 0 0}
