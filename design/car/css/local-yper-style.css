@@ -443,7 +443,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 
 
 /*결과===============*/
-.result-wrap{position: relative;background-color: #525F7A;margin-top: -20px;padding: 60px 20px 30px}
+.result-wrap{position: relative;background-color: #525F7A;margin-top: -60px;padding: 60px 20px 30px}
 .result-wrap *{color: #fff}
 .result-wrap .close-btn{position: absolute;top: 0;right: 0;width: 60px;height: 60px;background-image: url(../images/close-btn-w.svg)}
 .result-wrap .tel-btn{position: absolute;right: 14px;top: 15px;display: inline-block;color: #2A6DF3;padding: 5px 13px 7px 28px;border: 1px solid #2A6DF3;border-radius: 15px;font-size: 13px;font-weight: bold;background-image: url(../images/tel-icon.svg);background-size: 12px 12px;background-position: 12px 50%;background-repeat: no-repeat;background-color: #fff}
