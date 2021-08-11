@@ -8,7 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
 nav, ul, li, dl, dt, dd {list-style:none;margin: 0;padding: 0}
 blockquote, q {quotes:none}
 blockquote:before, blockquote:after, q:before, q:after {content:'';content:none}
-a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration: none}
+a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration: none;-webkit-tap-highlight-color:transparent}
 ins {background-color:#ff9;color:#000;text-decoration:none}
 mark {background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
 del {text-decoration: line-through}
@@ -17,7 +17,7 @@ table {border-collapse:collapse;border-spacing:0}
 hr {display:block;height:1px;border:0; border-top:1px solid #ccc;margin:1em 0;padding:0}
 strong{color: inherit}
 input, textarea {vertical-align:middle;outline: none;cursor: pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-appearance:none;-moz-appearance: none;appearance: none;border-radius:0;border: none}
-button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button;border-radius:0;padding: 0;outline: none}
+button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button;border-radius:0;padding: 0;outline: none;-webkit-tap-highlight-color:transparent}
 
 /*공통===============*/
 .icon{display: inline-block;background-repeat: no-repeat;background-size: contain;background-position: center;color: transparent!important}
@@ -436,11 +436,16 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .full-layer-wrap .term-wrap li{margin-bottom: 6px;color: #666}
 .full-layer-wrap .term-wrap ol{list-style: decimal;padding-left: 14px}
 .full-layer-wrap .term-wrap ol li{list-style: inherit}
-.full-layer-wrap .term-wrap ul li{margin-bottom: 20px}
+.full-layer-wrap .term-wrap ul li{margin-bottom: 16px}
+.full-layer-wrap .term-wrap ul li p{margin-bottom: 0;color: inherit}
 .full-layer-wrap .term-wrap ul .tit{font-size: 16px;font-weight: bold;margin-bottom: 16px}
 .full-layer-wrap .term-wrap ul .sub-tit{font-weight: bold;margin-bottom: 8px;color: #666}
 .full-layer-wrap .term-wrap .dash-list li{position: relative;padding-left: 10px;margin-bottom: 4px}
 .full-layer-wrap .term-wrap .dash-list li::before{content: "-";position: absolute;left: 0}
+.full-layer-wrap .term-wrap .block{margin-bottom: 40px;}
+.full-layer-wrap .term-wrap .block:last-of-type{margin-bottom: 0;}
+.full-layer-wrap .term-wrap .label-block label:first-of-type{margin-right: 24px;}
+.full-layer-wrap .term-wrap .label-block label .text{color: #666;}
 
 
 /*결과===============*/
@@ -511,6 +516,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .ad-swiper .swiper-pagination{bottom: 0}
 .result-list li .ad-swiper .swiper-pagination-bullet{background-color: #899ABE;opacity: 0.35;margin: 0 3px}
 .result-list li .ad-swiper .swiper-pagination-bullet-active{background-color: #899ABE;opacity: 1}
+
+.result-list li .banner-btn{display: block;border-radius: 10px;overflow: hidden;}
 
 .result-list + .bottom-fixed-wrap{position: sticky;padding: 0 16px 20px;text-align: center;background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 30%);}
 .result-list + .bottom-fixed-wrap > p{display: inline-block;border-radius: 8px;padding: 13px 17px;line-height: 1;font-size: 13px;letter-spacing: -1px;background: #fff;border: 1px solid rgba(0,0,0,.09);box-shadow: 0 6px 4px -2px rgb(27 71 132 / 44%);font-weight: 700;color: #444;position: relative;transform: translateY(6px);}
