@@ -16,6 +16,7 @@ abbr[title], dfn[title] {border-bottom:1px dotted;cursor:help}
 table {border-collapse:collapse;border-spacing:0}
 hr {display:block;height:1px;border:0; border-top:1px solid #ccc;margin:1em 0;padding:0}
 strong{color: inherit}
+label{-webkit-tap-highlight-color: transparent;}
 input, textarea {vertical-align:middle;outline: none;cursor: pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-appearance:none;-moz-appearance: none;appearance: none;border-radius:0;border: none}
 button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button;border-radius:0;padding: 0;outline: none}
 
@@ -359,7 +360,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 /*약관 ====================*/
 .term-wrap li{position: relative;margin-bottom: 8px}
 .term-wrap li:last-child{margin-bottom: 0}
-.term-wrap label{display: block} 
+.term-wrap > ul > li > ul{margin-top: 10px;padding-left: 24px;}
 .term-wrap label input{position: absolute;left: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .term-wrap label .check{position: absolute;top: 2px;margin: 0;display: inline-block;width: 15px;height: 15px;background-size: contain;background-color: #EBEEF4;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 3px;}
 .term-wrap label input:checked + .check{background-color: #5C7CFA;background-image: url(../images/check-icon.svg);-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
@@ -457,12 +458,18 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .full-layer-wrap .term-wrap li{margin-bottom: 6px;color: #666}
 .full-layer-wrap .term-wrap ol{list-style: decimal;padding-left: 14px}
 .full-layer-wrap .term-wrap ol li{list-style: inherit}
-.full-layer-wrap .term-wrap ul li{margin-bottom: 20px}
+.full-layer-wrap .term-wrap ul li{margin-bottom: 16px}
+.full-layer-wrap .term-wrap ul li p{margin-bottom: 0;color: inherit}
 .full-layer-wrap .term-wrap ul .tit{font-size: 16px;font-weight: bold;margin-bottom: 16px}
 .full-layer-wrap .term-wrap ul .sub-tit{font-weight: bold;margin-bottom: 8px;color: #666}
 .full-layer-wrap .term-wrap .dash-list li{position: relative;padding-left: 10px;margin-bottom: 4px}
 .full-layer-wrap .term-wrap .dash-list li::before{content: "-";position: absolute;left: 0}
-
+.full-layer-wrap .term-wrap .block{margin-bottom: 40px;}
+.full-layer-wrap .term-wrap .block:last-of-type{margin-bottom: 0;}
+.full-layer-wrap .term-wrap .label-block label{display: inline-block;}
+.full-layer-wrap .term-wrap .label-block label:first-of-type{margin-right: 24px;}
+.full-layer-wrap .term-wrap .label-block label .text{color: #666;display: inline-block;padding: 0;}
+.full-layer-wrap .term-wrap .label-block .check{width: 20px;height: 20px;position: static;top: unset;margin-right: 6px;vertical-align: middle;}
 
 
 /*푸터===============*/
