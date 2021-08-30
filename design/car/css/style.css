@@ -537,7 +537,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list + .bottom-fixed-wrap > p > strong{color: #3B5BDB;}
 
 
-/*푸터===============*/
+/*푸터================*/
 footer{padding-top: 10px;background: #EBEEF4;letter-spacing: normal;line-height: 1.45;font-size: 12px;margin-bottom: -140px}
 footer *{color: #a4acbb}
 footer > div{background-color: #F7F8FB}

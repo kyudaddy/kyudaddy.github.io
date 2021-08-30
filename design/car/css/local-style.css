@@ -537,7 +537,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list + .bottom-fixed-wrap > p > strong{color: #3B5BDB;}
 
 
-/*푸터===============*/
+/*푸터================*/
 footer{padding-top: 10px;background: #EBEEF4;letter-spacing: normal;line-height: 1.45;font-size: 12px;margin-bottom: -140px}
 footer *{color: #a4acbb}
 footer > div{background-color: #F7F8FB}
@@ -560,7 +560,6 @@ footer .footer-info span{display: block}
 .app-install-wrap .btn-block img{width: 210px;}
 .app-install-wrap .btn-block .app-btn{display: inline-block;padding: 16px 40px;border-radius: 30px;background-color: #FFE500;font-size: 15px;font-weight: bold;color: #111;margin-top: 20px;border: 1px solid #525F7A;box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.3);}
 .app-install-wrap .app-btn .icon{background-image: url(../images/arrow-dw-k.svg);width: 13px;height: 13px;margin-left: 4px;vertical-align: middle;}
-
 
 
 /*스피너===============*/
