@@ -562,6 +562,7 @@ footer .footer-info span{display: block}
 .app-install-wrap .app-btn .icon{background-image: url(../images/arrow-dw-k.svg);width: 13px;height: 13px;margin-left: 4px;vertical-align: middle;}
 
 
+
 /*스피너===============*/
 .spinner-wrap{z-index: 999;position: fixed;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.6);display: flex;align-items: center;justify-content: center;flex-direction: column}
 .spinner-wrap.off{display: none}
