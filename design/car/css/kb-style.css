@@ -518,6 +518,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .insurance .benefit{color: #56534A;margin-top: 12px}
 .result-list li .insurance .benefit .block{display: inline-block;font-size: 13px;font-weight: bold;border: 1px solid #9A9892;border-radius: 16px;padding: 4px 12px 5px;color: inherit;margin: 0 4px 6px 0}
 .result-list li .insurance .benefit p{color: inherit;font-size: 14px;margin: 0 0 0 3px}
+.result-list li .insurance .benefit .block.carrot{color: rgb(255 70 0 / 70%);border-color: rgb(255 70 0 / 60%);}
 .result-list li .insurance .sm-txt{margin-top: 8px;font-size: 12px}
 .result-list li .insurance .price{text-align: right}
 .result-list li .insurance .price span{color: #9A9892;font-size: 21px;margin-right: 6px}

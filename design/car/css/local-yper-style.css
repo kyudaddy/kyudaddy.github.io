@@ -500,6 +500,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .insurance .benefit p{color: inherit;font-size: 14px;margin: 0 0 0 3px}
 .result-list li.direct .insurance .benefit{color: #6e8ecc}
 .result-list li.direct .insurance .benefit .block{border-color: #b5c4ff}
+.result-list li .insurance .benefit .block.carrot{color: rgb(255 70 0 / 70%);border-color: rgb(255 70 0 / 60%);}
 .result-list li .insurance .sm-txt{margin-top: 8px;font-size: 12px}
 .result-list li .insurance .price{text-align: right}
 .result-list li .insurance .price span{color: #899ABE;font-size: 21px;margin-right: 6px}
