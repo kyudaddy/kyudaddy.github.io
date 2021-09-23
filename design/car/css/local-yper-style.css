@@ -195,6 +195,9 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .bottom-fixed-wrap .term-wrap label .check{position: absolute;top: 0;margin: 0} 
 .bottom-fixed-wrap .term-wrap label .text{display: block;font-weight: bold;font-size: 15px;padding-left: 30px;min-height: 20px} 
 .bottom-fixed-wrap .term-wrap label a{text-decoration: underline;color: inherit;margin: 0}
+.bottom-fixed-wrap > p{display: inline-block;border-radius: 8px;padding: 13px 17px;line-height: 1;font-size: 13px;letter-spacing: -1px;background: #fff;border: 1px solid rgba(0,0,0,.09);box-shadow: 0 6px 4px -2px rgb(27 71 132 / 44%);font-weight: 700;color: #444;position: relative;transform: translateY(6px);}
+.bottom-fixed-wrap > p::after{content: "";width: 14px;height: 14px;background: #fff;position: absolute;bottom: -4px;left: 50%;margin-left: -6px;border-radius: 2px;transform: rotate(45deg);display: block;}
+.bottom-fixed-wrap > p > strong{color: #3B5BDB;}
 .bottom-fixed-wrap .bubble{position: absolute;top: -20px;right: calc(50% - 170px/2);display: inline-block;font-size: 12px;color: #fff;padding: 7px 14px 8px;border-radius: 6px;background-color: #1BC2B2;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)}
 .bottom-fixed-wrap .bubble:after {top: 100%;left: 50%;border: solid transparent;content: "";height: 0;width: 0;position: absolute;pointer-events: none;border-color: rgba(237, 242, 255, 0);border-top-color: #1BC2B2;border-width: 6px;margin-left: -6px}
 
@@ -482,8 +485,13 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-wrap .car-info-wrap ol li{font-size: 15px;color: #fff;margin-bottom: 6px}
 .result-wrap .car-info-wrap ol li:last-child{margin-bottom: 0}
 .result-wrap .car-info-wrap .info-btn{display: inline-block;margin-top: 20px;font-size: 14px;font-weight: bold;background-color: rgba(255,255,255,0.2);padding: 5px 20px 7px 9px;border-radius: 4px;background-image: url(../images/link-btn-icon.svg);background-repeat: no-repeat;background-position: calc(100% - 8px) 45%;background-size: 9px 9px}
+.result-wrap .caution-txt{margin-top: 16px;}
+.result-wrap .caution-txt li{color: #D8DDE9}
+.result-wrap .caution-txt li:last-child{margin-bottom: 0;}
 .result-wrap + .notice-txt{margin: 16px 20px}
 .result-wrap + .notice-txt + .result-list{margin-top: 0}
+
+.soting-wrap{font-size: 13px;font-weight: bold;color: #899ABE;text-align: right;margin: 24px 20px 0;}
 
 .result-list{margin-bottom: 30px}
 .result-list li{padding: 0 20px;margin: 0!important}
@@ -508,7 +516,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .insurance .price > strong::after{position: absolute;top: 4px;right: 0;content: "원";font-weight: normal;font-size: 24px;margin-left: 2px}
 .result-list li .insurance .price p{display: block;font-size: 16px}
 .result-list li .insurance .price p strong{color: #2A6DF3}
-.result-list li .insurance .notice-txt{font-size: 12px;background-color: #fff;line-height: 1.4}
+.result-list li .insurance .notice-txt{font-size: 12px;line-height: 1.4}
+.result-list li.direct .insurance .notice-txt{background-color: #fff;}
 
 .result-list li .insurance .submit-btn{margin-top: 12px}
 .result-list li .btn-wrap{margin-top: 30px}
@@ -532,9 +541,6 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-list li .banner-btn{display: block;border-radius: 10px;overflow: hidden;}
 
 .result-list + .bottom-fixed-wrap{position: -webkit-sticky;position: sticky;padding: 0 16px 20px;text-align: center;background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 30%);}
-.result-list + .bottom-fixed-wrap > p{display: inline-block;border-radius: 8px;padding: 13px 17px;line-height: 1;font-size: 13px;letter-spacing: -1px;background: #fff;border: 1px solid rgba(0,0,0,.09);box-shadow: 0 6px 4px -2px rgb(27 71 132 / 44%);font-weight: 700;color: #444;position: relative;transform: translateY(6px);}
-.result-list + .bottom-fixed-wrap > p::after{content: "";width: 14px;height: 14px;background: #fff;position: absolute;bottom: -4px;left: 50%;margin-left: -6px;border-radius: 2px;transform: rotate(45deg);display: block;}
-.result-list + .bottom-fixed-wrap > p > strong{color: #3B5BDB;}
 
 
 /*푸터================*/
