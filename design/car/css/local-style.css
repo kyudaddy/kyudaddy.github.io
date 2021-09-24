@@ -497,7 +497,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .result-wrap + .notice-txt{margin: 16px 20px}
 .result-wrap + .notice-txt + .result-list{margin-top: 0}
 
-.soting-wrap{font-size: 13px;font-weight: bold;color: #899ABE;text-align: right;margin: 24px 20px 0;}
+.soting-wrap{text-align: right;margin: 24px 20px 0;}
+.soting-wrap select{font-size: 13px;font-weight: bold;text-align: right;color: #6E84AF;  background-color: #fff;background-image: url(../images/select-icon.svg);background-size: 15px 15px;background-position: calc(100% - 4px) 45%;background-repeat: no-repeat; border: none;-webkit-appearance:none;-moz-appearance:none; -o-appearance:none; appearance:none;padding: 4px 22px 4px 4px;}
 
 .result-list{margin-bottom: 30px}
 .result-list li{padding: 0 20px;margin: 0!important}
