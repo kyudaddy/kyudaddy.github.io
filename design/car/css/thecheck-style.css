@@ -186,7 +186,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 
 .bottom-fixed-wrap{z-index: 100;position: fixed;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 0 auto}
 .bottom-fixed-wrap > *{margin: 0}
-.bottom-fixed-wrap .term-wrap{margin-bottom: 24px}
+.bottom-fixed-wrap .term-wrap{text-align: left;margin-bottom: 24px}
 .bottom-fixed-wrap .term-wrap .check-all{text-align: left;padding: 9px 10px 11px;margin-bottom: 10px}
 .bottom-fixed-wrap .term-wrap .check-all .text{font-size: 14px}
 .bottom-fixed-wrap .term-wrap li{margin-bottom: 12px}
