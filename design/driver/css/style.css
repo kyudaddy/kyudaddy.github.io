@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-*{-webkit-box-sizing: border-box;box-sizing: border-box;color: #333;font-family: 'Lato','Noto Sans KR',Noto Sans Korean, -apple-system, Apple SD Gothic Neo, sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-rendering: optimizeLegibility}
+*{box-sizing: border-box;color: #333;font-family: 'Lato','Noto Sans KR',Noto Sans Korean, -apple-system, Apple SD Gothic Neo, sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;text-rendering: optimizeLegibility}
 html, body, div, p, ol, ul, li, nav, section, h1, h2, h3, h4{margin: 0;padding: 0}
 body {background-color: #fff;min-width: 320px;min-height: 100vh;max-width: 420px;overflow-x: hidden;margin: 0 auto;line-height:1.3;letter-spacing: -0.025em;-webkit-text-size-adjust:none}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block}
@@ -48,7 +48,7 @@ header > .tit{font-size: 17px;font-weight: bold;text-align: center;line-height: 
 .title-wrap p{font-size: 14px;color: #899ABE;line-height: 1.3;margin-top: 12px;word-break: keep-all}
 .title-wrap p strong{color: #506591;margin-right: 4px}
 .title-wrap .progress-bar{height: 8px;background: #EBEEF4;border-radius: 8px;margin-bottom: 30px;overflow: hidden}
-.title-wrap .progress-bar .bar{height: inherit;background: -webkit-gradient(linear, left top, right top, from(#819AFF), color-stop(100.3%, #5678FF));background: linear-gradient(90deg, #819AFF 0%, #5678FF 100.3%);border-radius: 8px 0px 0px 8px}
+.title-wrap .progress-bar .bar{height: inherit;background: linear-gradient(90deg, #819AFF 0%, #5678FF 100.3%);border-radius: 8px 0px 0px 8px}
 .title-wrap .img{display: block}
 
 @media only screen and (max-width: 359px){
@@ -124,7 +124,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .helper-txt.error{color: #EF4949}
 
 .submit-btn{display: block;width: 100%;padding: 13px 0 17px;margin-top: 26px;font-size: 16px;font-weight: 800;background-color: #CED4DA;color: #fff;text-align: center;border-radius: 4px;border: none}
-.submit-btn.on{background-color: #5C7CFA;color: #fff;-webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15)}
+.submit-btn.on{background-color: #5C7CFA;color: #fff;box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15)}
 .submit-btn.border{background-color: #fff;color: #5C7CFA;border: 1px solid #5C7CFA}
 .submit-btn.txt{color: #96A6C5;background-color: transparent;margin-top: 8px;font-size: 13px;padding: 10px 0}
 .submit-btn.more{display: block;width: 100%;padding: 12px 0;margin: 12px 0;font-size: 15px;font-weight: 800;background-color: #fff;color: #506591;text-align: center;}
@@ -134,7 +134,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
   .submit-btn{font-size: 15px}
 }
 
-.btn-wrap{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-top: 32px}
+.btn-wrap{display: flex;justify-content: space-between;margin-top: 32px}
 .btn-wrap .submit-btn{display: inline-block;width: calc(50% - 4px);padding: 12px 0 14px;margin-top: 0}
 .btn-wrap .submit-btn:last-child{margin-left: 8px}
 .btn-wrap .submit-btn:only-child{display: block;width: 100%;margin: 0}
@@ -143,9 +143,9 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .btn-wrap .submit-btn .icon.tel{background-image: url(/design/driver/images/tel-icon.svg);background-size: 85%}
 .submit-btn.on .icon.tel {width: 16px;height: 16px;margin-right: 6px;vertical-align: middle;background-image: url(/design/driver/images/tel-icon-w.svg);background-size: 85%}
 
-.bottom-fixed-wrap{position: fixed;display: -webkit-box;display: -ms-flexbox;display: flex;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #FFFFFF), to(rgba(255, 255, 255, 0.0001)));background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 40px auto 0}
+.bottom-fixed-wrap{position: fixed;display: flex;bottom: 0;left: 0;right: 0;padding: 30px 16px 20px;background: linear-gradient(0deg, #FFFFFF 90%, rgba(255, 255, 255, 0.0001) 100%);max-width: 420px;margin: 40px auto 0}
 .bottom-fixed-wrap > *{margin: 0}
-.bottom-fixed-wrap .bubble{position: absolute;top: -20px;right: calc(50% - 170px/2);display: inline-block;font-size: 12px;color: #fff;padding: 7px 14px 8px;border-radius: 6px;background-color: #1BC2B2;-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)}
+.bottom-fixed-wrap .bubble{position: absolute;top: -20px;right: calc(50% - 170px/2);display: inline-block;font-size: 12px;color: #fff;padding: 7px 14px 8px;border-radius: 6px;background-color: #1BC2B2;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)}
 .bottom-fixed-wrap .bubble:after {top: 100%;left: 50%;border: solid transparent;content: "";height: 0;width: 0;position: absolute;pointer-events: none;border-color: rgba(237, 242, 255, 0);border-top-color: #1BC2B2;border-width: 6px;margin-left: -6px}
 .bottom-fixed-wrap .submit-btn:first-child:nth-last-child(2),
 .bottom-fixed-wrap .submit-btn:first-child:nth-last-child(1) ~ .submit-btn{width: calc(40% - 8px);margin-right: 8px} 
@@ -158,10 +158,14 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .input-wrap input:disabled{background-color: #EBEEF4;border-color: #D8DDE9}
 .input-wrap input:disabled::-webkit-input-placeholder{color: transparent}
 .input-wrap input:disabled:-ms-input-placeholder{color: transparent}
+.input-wrap input:disabled::-moz-placeholder{color: transparent}
+.input-wrap input:disabled::-ms-input-placeholder{color: transparent}
 .input-wrap input:disabled::placeholder{color: transparent}
 
 .input-wrap *::-webkit-input-placeholder{color: #CAD2E2;font-weight: normal;font-size: 16px}
 .input-wrap *:-ms-input-placeholder{color: #CAD2E2;font-weight: normal;font-size: 16px}
+.input-wrap *::-moz-placeholder{color: #CAD2E2;font-weight: normal;font-size: 16px}
+.input-wrap *::-ms-input-placeholder{color: #CAD2E2;font-weight: normal;font-size: 16px}
 .input-wrap *::placeholder{color: #CAD2E2;font-weight: normal;font-size: 16px}
 .input-wrap .inputclear{position: absolute;right: 12px;top: 16px;width: 18px;height: 18px;background-color: #CAD2E2;border-radius: 50%;background-image: url(/design/driver/images/clear.svg);background-size: 8px 8px;cursor: pointer}
 .input-wrap .i-none{display: none}
@@ -171,13 +175,17 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 
 .input-wrap + .link-btn{margin-top: 12px}
 
-.phone-readonly input{float: left;display: inline-block}
+.phone-readonly{display: flex;}
 .phone-readonly input:first-of-type{width: 35%}
 .phone-readonly input:last-of-type{width: calc(65% - 8px);margin-left: 8px}
 
-.input-wrap.phone-number > *{display: inline-block;float: left}
+.input-wrap.phone-number{display: flex;}
 .input-wrap.phone-number input{width: 60%}
-.input-wrap.phone-number .submit-btn{width: calc(40% - 8px);margin-left: 8px;margin-top: 0;    padding: 15px 0 17px;font-size: 15px}
+.input-wrap.phone-number .submit-btn{width: calc(40% - 8px);margin-left: 8px;margin-top: 0;padding: 15px 0 17px;font-size: 15px}
+
+.input-wrap.phone-number-3{display: flex;margin: 0 -4px;}
+.input-wrap.phone-number-3 > input{margin: 0 4px;text-align: center;}
+.input-wrap.phone-number-3 + .submit-btn{margin-top: 8px;}
 
 .input-wrap.error input{border-color: #E02B2B}
 .input-wrap.error + .helper-txt{color: #E02B2B}
@@ -187,8 +195,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 
 .radio-list label{position: relative;display: block;padding: 12px 0 14px} 
 .radio-list label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
-.radio-list label .check{position: absolute;right: 0;display: inline-block;width: 24px;height: 24px;background-color: #EBEEF4;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 50%;vertical-align: middle}
-.radio-list label input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);background-position: center;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
+.radio-list label .check{position: absolute;right: 0;display: inline-block;width: 24px;height: 24px;background-color: #EBEEF4;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 50%;vertical-align: middle}
+.radio-list label input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);background-position: center;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
 .radio-list label .text{font-size: 17px;font-weight: bold;color: #506591}
 .radio-list label p{font-size: 14px;font-weight: bold;color: #5C7CFA;margin-top: 6px}
 
@@ -200,21 +208,21 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .check-list label .price{display: block;font-size: 19px;font-weight: bold;color: #5C7CFA;margin-top: 4px}
 .check-list label .price::after{content: "원";margin-left: 2px;font-size: 0.9em}
 .check-list label ~ input{position: absolute;z-index: 2;right: 0;top: 0;width: 20px;height: 20px;border-radius: 50%;display: inline-block;opacity: 0}
-.check-list label ~ .check{position: absolute;top: 2px;right: 0;display: inline-block;width: 20px;height: 20px;background-color: #EBEEF4;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 4px;vertical-align: middle}
-.check-list label ~ input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);background-position: center;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
+.check-list label ~ .check{position: absolute;top: 2px;right: 0;display: inline-block;width: 20px;height: 20px;background-color: #EBEEF4;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 4px;vertical-align: middle}
+.check-list label ~ input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);background-position: center;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
 .check-list label ~ input[type="radio"] + .check{border-radius: 50%;width: 22px;height: 22px;}
 .check-list label ~ .box-wrap{margin-top: 10px}
 .check-list input:checked ~ .box-wrap{background-color: #EDF2FF}
 .check-list input:checked ~ .box-wrap .blit li{color: #4668C2}
 .check-list input:checked ~ .box-wrap .blit li::before{background-color: #4668C2}
 
-.type-wrap{margin-bottom: 30px}
-.type-wrap label{position: relative;display: inline-block;float: left;width: calc(33.33% - 6px);padding: 14px 0 18px 12px;border: 1px solid #E5E9F1;border-radius: 4px}
+.type-wrap{display: flex;margin-bottom: 30px}
+.type-wrap label{position: relative;width: calc(33.33% - 6px);padding: 14px 0 18px 12px;border: 1px solid #E5E9F1;border-radius: 4px}
 .type-wrap label ~ label{margin-left: 8px}
 .type-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
-.type-wrap label .check{position: absolute;right: 10px;top: calc(50% - 26px/2);display: inline-block;width: 24px;height: 24px;background-color: #EBEEF4;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 50%}
+.type-wrap label .check{position: absolute;right: 10px;top: calc(50% - 26px/2);display: inline-block;width: 24px;height: 24px;background-color: #EBEEF4;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 50%}
 .type-wrap label .text{font-size: 16px;font-weight: bold;color: #BDC7DB}
-.type-wrap label input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);background-position: center;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
+.type-wrap label input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);background-position: center;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
 .type-wrap label input:checked ~ .text{color: #5C7CFA}
 .type-wrap label input:checked ~ .text::after{content: "";position: absolute;right: -1px;left: -1px;top: -1px;bottom: -1px;border: 2px solid #5C7CFA;border-radius: 4px}
 .type-wrap .helper-txt{font-weight: bold}
@@ -225,8 +233,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 }
 
 .notice-txt + ul{margin-top: 30px}
-.radio-btn-wrap{margin: -4px}
-.radio-btn-wrap label{position: relative;display: inline-block;float: left;width: calc(33.33% - 8px);padding: 12px 0 16px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 4px}
+.radio-btn-wrap{display: flex;flex-wrap: wrap;margin: -4px}
+.radio-btn-wrap label{position: relative;width: calc(33.33% - 8px);padding: 12px 0 16px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 4px}
 .radio-btn-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .radio-btn-wrap label .text{font-size: 15px;color: #BDC7DB}
 .radio-btn-wrap label input:checked ~ .text{color: #5C7CFA;font-weight: bold;}
@@ -246,22 +254,29 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .radio-btn-wrap label.logo .logo-ct{background-image: url(/design/driver/images/citicard.png)}
 .radio-btn-wrap label.logo .logo-kk{background-image: url(/design/driver/images/kakaobank.png)}
 
-.relative-wrap{margin: -4px;display: -webkit-box;display: -ms-flexbox;display: flex}
-.relative-wrap label{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;position: relative;width: calc(33.33% - 8px);padding: 0 10px 2px;height: 60px;word-break: keep-all;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 4px}
+.relative-wrap{margin: -4px;display: flex}
+.relative-wrap label{display: flex;align-items: center;justify-content: center;position: relative;width: calc(33.33% - 8px);padding: 0 10px 2px;height: 60px;word-break: keep-all;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 4px}
 .relative-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .relative-wrap label .text{font-size: 15px;font-weight: bold;color: #BDC7DB}
 .relative-wrap label input:checked ~ .text{color: #5C7CFA}
 .relative-wrap label input:checked ~ .text::after{content: "";position: absolute;right: -1px;left: -1px;top: -1px;bottom: -1px;border: 2px solid #5C7CFA;border-radius: 4px}
 
-.input-wrap.social-number{display: -webkit-box;display: -ms-flexbox;display: flex}
+.input-wrap.social-number{display: flex}
 .input-wrap.social-number > input{width: 60%} 
 .input-wrap.social-number > input::-webkit-input-placeholder{font-size: 13px} 
 .input-wrap.social-number > input:-ms-input-placeholder{font-size: 13px} 
+.input-wrap.social-number > input::-moz-placeholder{font-size: 13px} 
+.input-wrap.social-number > input::-ms-input-placeholder{font-size: 13px} 
 .input-wrap.social-number > input::placeholder{font-size: 13px}
 .input-wrap.social-number input + input{margin-left: 6px;-webkit-text-security: disc} 
 .input-wrap.social-number input:read-only::-webkit-input-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only:-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-webkit-input-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only:-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::placeholder{color: #506591} 
 .input-wrap.social-number input[size="1"]{position: relative;width: auto;text-align: center}
 .input-wrap.social-number .else-number{color: #6e84af;font-size: 21px;font-weight: 900;letter-spacing: 5px;vertical-align: text-top;margin-left: 6px}
@@ -270,8 +285,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
   .input-wrap.social-number .else-number{font-size: 24px;letter-spacing: 6px;margin-left: 10px}
 }
 
-.sex-wrap{width: 40%;margin: 0 -2px 0 4px}
-.sex-wrap label{position: relative;display: inline-block;float: left;width: calc(50% - 4px);padding: 15px 0 17px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 0 2px}
+.sex-wrap{display: flex;width: 40%;margin: 0 -2px 0 4px}
+.sex-wrap label{position: relative;width: calc(50% - 4px);padding: 15px 0 17px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 0 2px}
 .social-number input:disabled + .sex-wrap label{background-color: #EBEEF4;border-color: #D8DDE9;border-color: #D8DDE9}
 .sex-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .sex-wrap label .text{font-size: 16px;font-weight: bold;color: #BDC7DB}
@@ -289,8 +304,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .block-bar.accordion .accordion-btn{position: absolute;left: 0;top: 0;display: inline-block;width: 1px;height: 1px;opacity: 0}
 .block-bar.accordion .tit{display: block;position: relative}
 .block-bar.accordion .tit::after{content: "";position: absolute;right: 0;top: calc(50% - 14px/2);display: inline-block;width: 14px;height: 14px;background-image: url(/design/driver/images/accodion-icon.svg);background-repeat: no-repeat;background-size: contain;}
-.block-bar.accordion .accordion-btn:checked + label::after{-webkit-transform: rotate(180deg);transform: rotate(180deg);top: calc(50% - 14px/2);}
-.block-bar.accordion .accordion-txt{-webkit-transition: 0.3s;transition: 0.3s;height: 0;overflow: hidden;opacity: 0;padding: 18px 0 20px;background-color: #F5F6F9;color: #777;font-size: 13px;line-height: 140%;border-radius: 6px;margin-bottom: -36px}
+.block-bar.accordion .accordion-btn:checked + label::after{transform: rotate(180deg);top: calc(50% - 14px/2);}
+.block-bar.accordion .accordion-txt{transition: 0.3s;height: 0;overflow: hidden;opacity: 0;padding: 18px 0 20px;background-color: #F5F6F9;color: #777;font-size: 13px;line-height: 140%;border-radius: 6px;margin-bottom: -36px}
 .block-bar.accordion .accordion-btn:checked ~ .accordion-txt{height: auto;opacity: 1;margin-bottom: 0;}
 .block-bar.accordion table.accordion-txt{height: 37px;width: 100%;}
 .block-bar.accordion table.accordion-txt tr > *{display: none;color: #777;border-bottom: 1px solid rgba(0,0,0,0.08);padding: 5px 5px 5px 0;font-size: 12px}
@@ -339,7 +354,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .info-table > tbody td:first-child{color: #899ABE;width: 50%;text-align: left}
 .info-table > tbody td{border-bottom: 1px solid #EBEEF4}
 
-.insurance-bl{position: relative;display: block;padding: 18px 14px 18px;background: #FFF;border: 1px solid #F9FAFC;-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.152174);box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.152174);border-radius: 6px;margin-bottom: 10px;}
+.insurance-bl{position: relative;display: block;padding: 18px 14px 18px;background: #FFF;border: 1px solid #F9FAFC;box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.152174);border-radius: 6px;margin-bottom: 10px;}
 .insurance-bl:last-of-type{margin-bottom: 0;}
 .insurance-bl .icon{position: absolute;right: 18px;top: 8px;width: 98px;height: 40px;}
 .insurance-bl .name{display: block;color: #506591;font-size: 15px;font-weight: bold;margin-bottom: 8px;padding-right: 110px}
@@ -362,8 +377,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .term-wrap li:last-child{margin-bottom: 0}
 .term-wrap > ul > li > ul{margin-top: 10px;padding-left: 24px;}
 .term-wrap label input{position: absolute;left: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
-.term-wrap label .check{position: absolute;top: 2px;margin: 0;display: inline-block;width: 15px;height: 15px;background-size: contain;background-color: #EBEEF4;-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 3px;}
-.term-wrap label input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);-webkit-box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
+.term-wrap label .check{position: absolute;top: 2px;margin: 0;display: inline-block;width: 15px;height: 15px;background-size: contain;background-color: #EBEEF4;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 3px;}
+.term-wrap label input:checked + .check{background-color: #5C7CFA;background-image: url(/design/driver/images/check-icon.svg);box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1)}
 .term-wrap label .text{display: block;font-size: 13px;color: #506591;padding-left: 24px;padding-right: 20px;min-height: 19px}
 .term-wrap label #check-all ~ .text{font-weight: bold;font-size: 16px;padding-left: 28px;min-height: 25px}
 .term-wrap label #check-all + .check{width: 20px;height: 20px;}
@@ -373,9 +388,9 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 
 
 /*layer-wrap===============*/
-.layer-wrap{z-index: 999;position: fixed;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;max-width: 420px;overflow-x: hidden;margin: 0 auto;background-color: rgba(0,0,0,0.6);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center}
+.layer-wrap{z-index: 999;position: fixed;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;max-width: 420px;overflow-x: hidden;margin: 0 auto;background-color: rgba(0,0,0,0.6);display: flex;align-items: center;justify-content: center}
 .layer-wrap.off{display: none}
-.layer-wrap .dialog{position: relative;background-color: #fff;padding: 30px 20px;border-radius: 10px;width: 80%;max-width: 330px;-webkit-box-shadow: 0px 10px 14px rgba(3, 3, 3, 0.5);box-shadow: 0px 10px 14px rgba(3, 3, 3, 0.5)}
+.layer-wrap .dialog{position: relative;background-color: #fff;padding: 30px 20px;border-radius: 10px;width: 80%;max-width: 330px;box-shadow: 0px 10px 14px rgba(3, 3, 3, 0.5)}
 .layer-wrap .dialog h4{color: #506591;font-size: 21px}
 .layer-wrap .dialog h5{color: #506591;font-size: 17px;margin-bottom: 16px}
 .layer-wrap .dialog p{margin-top: 12px;font-size: 14px;color: #899ABE}
@@ -394,7 +409,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .layer-wrap .dialog .tel-btn::before{content: "";position: absolute;top: calc(50% - 9px);left: 2px;display: inline-block;width: 20px;height: 20px;background-image: url(/design/driver/images/tel-icon.svg);background-size: contain;background-repeat: no-repeat;background-position: center}
 .layer-wrap .dialog .tel-btn::after{content: "";position: absolute;right: 0;top: calc(50% - 10px);display: inline-block;width: 20px;height: 20px;background-image: url(/design/driver/images/more-btn.svg);background-size: contain;background-repeat: no-repeat;background-position: center}
 
-.layer-wrap .bottomsheet{position: absolute;left: 0;right: 0;bottom: 0;height: auto;background-color: #fff;padding: 16px 24px;border-radius: 10px 10px 0 0;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column}
+.layer-wrap .bottomsheet{position: absolute;left: 0;right: 0;bottom: 0;height: auto;background-color: #fff;padding: 16px 24px;border-radius: 10px 10px 0 0;display: flex;flex-direction: column}
 .layer-wrap .bottomsheet .top{text-align: center;line-height: 28px;margin-bottom: 12px}
 .layer-wrap .bottomsheet .top h3{font-size: 17px;color: #415376}
 .layer-wrap .bottomsheet .top .close-btn{position: absolute;right: 0;top: 0;background-image: url(/design/driver/images/close-btn.svg);width: 60px;height: 60px}
@@ -413,7 +428,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .loading-wrap .top{position: relative;margin-top: 6vh}
 .loading-wrap .top h3{display: inline-block;color: #506591;font-size: 21px}
 .loading-wrap .top .progress-bar{height: 8px;background: #EBEEF4;border-radius: 8px;margin-top: 20px;overflow: hidden}
-.loading-wrap .top .progress-bar .bar{height: inherit;background: -webkit-gradient(linear, left top, right top, from(#819AFF), color-stop(100.3%, #5678FF));background: linear-gradient(90deg, #819AFF 0%, #5678FF 100.3%);border-radius: 8px 0px 0px 8px;-webkit-transition: 0.3s;transition: 0.3s}
+.loading-wrap .top .progress-bar .bar{height: inherit;background: linear-gradient(90deg, #819AFF 0%, #5678FF 100.3%);border-radius: 8px 0px 0px 8px;transition: 0.3s}
 
 .loading-wrap .qna-swiper{position: relative;overflow: hidden;margin-top: 10vh;margin-bottom: -140px} 
 .loading-wrap .qna-swiper .swiper-pagination{bottom: 0}
@@ -491,7 +506,7 @@ footer .footer-info span{display: block}
 
 
 /*스피너===============*/
-.spinner-wrap{z-index: 999;position: fixed;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.6);display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column}
+.spinner-wrap{z-index: 999;position: fixed;overflow: hidden;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.6);display: flex;align-items: center;justify-content: center;flex-direction: column}
 .spinner-wrap.off{display: none}
 .spinner-wrap .title{font-size: 17px;font-weight: bold;margin: 1em 0;color: #fff}
 .spinner {width: 70px;text-align: center}
@@ -516,11 +531,9 @@ footer .footer-info span{display: block}
 }
 
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
-    -webkit-transform: scale(0);
+  0%, 80%, 100% {
     transform: scale(0);
-  } 40% { 
-    -webkit-transform: scale(1.0);
+  } 40% {
     transform: scale(1.0);
   }
 }
