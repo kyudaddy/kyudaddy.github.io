@@ -323,6 +323,13 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
 .input-wrap.social-number input:-moz-read-only::placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::-webkit-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only:-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-webkit-input-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::-moz-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only:-ms-input-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::-ms-input-placeholder{color: #506591} 
