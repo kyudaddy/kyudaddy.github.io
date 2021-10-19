@@ -226,13 +226,17 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 
 .input-wrap + .link-btn{margin-top: 12px}
 
-.phone-readonly input{float: left;display: inline-block}
+.phone-readonly{display: flex;}
 .phone-readonly input:first-of-type{width: 35%}
 .phone-readonly input:last-of-type{width: calc(65% - 8px);margin-left: 8px}
 
-.input-wrap.phone-number > *{display: inline-block;float: left}
+.input-wrap.phone-number{display: flex;}
 .input-wrap.phone-number input{width: 60%}
-.input-wrap.phone-number .submit-btn{width: calc(40% - 8px);margin-left: 8px;margin-top: 0;    padding: 15px 0 17px;font-size: 15px}
+.input-wrap.phone-number .submit-btn{width: calc(40% - 8px);margin-left: 8px;margin-top: 0;padding: 15px 0 17px;font-size: 15px}
+
+.input-wrap.phone-number-3{display: flex;margin: 0 -4px;}
+.input-wrap.phone-number-3 > input{margin: 0 4px;text-align: center;}
+.input-wrap.phone-number-3 + .submit-btn{margin-top: 8px;}
 
 .input-wrap.error input{border-color: #E02B2B}
 .input-wrap.error + .helper-txt{color: #E02B2B}
@@ -256,8 +260,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .check-list p{font-size: 14px;color: #525F7A;margin-top: 6px}
 .check-list p strong{color: #5C7CFA}
 
-.type-wrap{margin-bottom: 30px}
-.type-wrap label{position: relative;display: inline-block;float: left;width: calc(33.33% - 6px);padding: 14px 0 18px 12px;border: 1px solid #E5E9F1;border-radius: 4px}
+.type-wrap{display: flex;margin-bottom: 30px}
+.type-wrap label{position: relative;width: calc(33.33% - 6px);padding: 14px 0 18px 12px;border: 1px solid #E5E9F1;border-radius: 4px}
 .type-wrap label ~ label{margin-left: 8px}
 .type-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .type-wrap label .check{position: absolute;right: 10px;top: calc(50% - 26px/2);display: inline-block;width: 24px;height: 24px;background-color: #EBEEF4;box-shadow: inset 0px 3px 5px rgba(82, 95, 122, 0.1);border-radius: 50%}
@@ -273,14 +277,14 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 }
 
 .notice-txt + ul{margin-top: 30px}
-.telecom-wrap{margin: -4px}
-.telecom-wrap label{position: relative;display: inline-block;float: left;width: calc(33.33% - 8px);padding: 12px 0 16px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 4px}
+.telecom-wrap{display: flex;flex-wrap: wrap;margin: -4px}
+.telecom-wrap label{position: relative;width: calc(33.33% - 8px);padding: 12px 0 16px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 4px}
 .telecom-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .telecom-wrap label .text{font-size: 16px;font-weight: bold;color: #BDC7DB}
 .telecom-wrap label input:checked ~ .text{color: #5C7CFA}
 .telecom-wrap label input:checked ~ .text::after{content: "";position: absolute;right: -1px;left: -1px;top: -1px;bottom: -1px;border: 2px solid #5C7CFA;border-radius: 4px}
 
-.relative-wrap{margin: -4px;display: flex}
+.relative-wrap{display: flex;margin: -4px}
 .relative-wrap label{display: flex;align-items: center;justify-content: center;position: relative;width: calc(33.33% - 8px);padding: 0 10px 2px;height: 60px;word-break: keep-all;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 4px}
 .relative-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .relative-wrap label .text{font-size: 15px;font-weight: bold;color: #BDC7DB}
@@ -305,6 +309,20 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
 .input-wrap.social-number input:-moz-read-only::placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::-webkit-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only:-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-webkit-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only:-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-ms-input-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::-moz-placeholder{color: #506591} 
+.input-wrap.social-number input:-moz-read-only::placeholder{color: #506591} 
+.input-wrap.social-number input:read-only::-webkit-input-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::-moz-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only:-ms-input-placeholder{color: #506591} 
 .input-wrap.social-number input:read-only::-ms-input-placeholder{color: #506591} 
@@ -316,8 +334,8 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 @media only screen and (min-width: 360px){
   .input-wrap.social-number .else-number{font-size: 24px;letter-spacing: 6px;margin-left: 10px}
 }
-.sex-wrap{width: 40%;margin: 0 -2px 0 4px}
-.sex-wrap label{position: relative;display: inline-block;float: left;width: calc(50% - 4px);padding: 15px 0 17px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 0 2px}
+.sex-wrap{display: flex;width: 40%;margin: 0 -2px 0 4px}
+.sex-wrap label{position: relative;width: calc(50% - 4px);padding: 15px 0 17px;text-align: center;border: 1px solid #E5E9F1;border-radius: 4px;margin: 0 2px}
 .social-number input:disabled + .sex-wrap label{background-color: #EBEEF4;border-color: #D8DDE9;border-color: #D8DDE9}
 .sex-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
 .sex-wrap label .text{font-size: 16px;font-weight: bold;color: #BDC7DB}
