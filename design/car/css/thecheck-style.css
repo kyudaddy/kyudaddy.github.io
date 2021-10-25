@@ -260,7 +260,7 @@ form ul > li:first-child ~ li .input-tit{margin-top: 16px}
 .check-list p{font-size: 14px;color: #4a4a4a;margin-top: 6px}
 .check-list p strong{color: #44bbcc}
 
-.type-wrap{display: flex;margin-bottom: 30px}
+.type-wrap{display: flex;flex-wrap: wrap;margin-bottom: 30px}
 .type-wrap label{position: relative;width: calc(33.33% - 6px);padding: 14px 0 18px 12px;border: 1px solid #E5E9F1;border-radius: 4px}
 .type-wrap label ~ label{margin-left: 8px}
 .type-wrap label input{position: absolute;right: 0;top: 0;width: 1px;height: 1px;display: inline-block;opacity: 0}
